@@ -1,0 +1,20 @@
+:root{
+    --main-background: #1C232A;
+    --main-font-color: white;
+}
+
+body{
+    font-family: 'Lato', sans-serif!important;
+    background-color: var(--main-background);
+    color:var(--main-font-color);
+}
+
+#jumbo-image {
+    background-size: cover;
+}
+
+.card-image{
+    overflow: hidden;
+}
+
+
