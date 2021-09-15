@@ -19,28 +19,8 @@
     <title>Game Browsing Homepage</title>
 </head>
 <body>
-    <!-- This is the navigation header -->
-    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #c0d3fc;">
-        <div class="container">
-          <a class="navbar-brand text-dark">Game Review Website</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <form class="container d-flex">
-                <div class="input-group">
-                  <span class="input-group-text btn btn-secondary" id="search">
-                      <i class="fa fa-search"></i>
-                    </span>
-                  <input type="text" class="form-control me-3" placeholder="Search for games..." aria-label="Games" aria-describedby="search-func">
-                </div>
-                <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                 <button class="btn btn-secondary" type="button" id="login">Login</button>
-          </div>
-        
-        </div>
-    </form>
-      </nav>
+ <?php include 'header.php';
+  ?>
 <!-- This is the jumbotron image section -->
     <!-- <section id="jumbotron-section">
     <div class="row">
