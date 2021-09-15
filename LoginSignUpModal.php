@@ -58,15 +58,12 @@
                             <div class="field">
                                 <input type="password" placeholder="Password" required>
                             </div>
-                            <div class="pass-link">
-                                <a href="#">Forgot password?</a>
-                            </div>
                             <div class="field btn">
                                 <div class="btn-layer"></div>
                                 <input type="submit" value="LogIn">
                             </div>
                         </form>
-                        <form action="signup.php" class="signUp">
+                        <form action="#" class="signUp">
                             <div class="field">
                                 <input type="text" placeholder="Email Address" required>
                             </div>
