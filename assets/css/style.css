@@ -1,0 +1,34 @@
+:root{
+    --main-background: #1C232A;
+    --main-font-color: white;
+    --button-color: #a9c3ed;
+}
+
+body{
+    font-family: 'Lato', sans-serif!important;
+    background-color: var(--main-background);
+    color:var(--main-font-color);
+}
+
+#jumbo-image {
+    background-size: cover;
+}
+
+#search{
+    background-color: var(--button-color);
+}
+
+#login{
+    background-color: var(--button-color);
+}
+
+.form-control.me-3 {
+    border: #fff solid 1px;
+}
+
+
+.card-image{
+    overflow: hidden;
+}
+
+
