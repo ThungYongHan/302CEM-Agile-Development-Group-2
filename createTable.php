@@ -22,13 +22,13 @@ REFERENCES Users(user_id)
 if ($mysqli->query($sql) === true) {
     echo "Users table created successfully";
 } else {
-    echo "Error creating tables: " . $mysqli->error;
+    echo "Error creating table: " . $mysqli->error;
 }
 
 if ($mysqli->query($sql1) === true) {
     echo "Reviews table created successfully";
 } else {
-    echo "Error creating tables: " . $mysqli->error;
+    echo "Error creating table: " . $mysqli->error;
 }
 
 $mysqli->close();
