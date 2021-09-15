@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,7 +51,7 @@
                         <div class="slider-tab"></div>
                     </div>
                     <div class="form-inner">
-                        <form method ="POST" action="login.php" class="login">
+
                             <div class="field">
                                 <input type="text" placeholder="Email Address" required>
                             </div>
@@ -65,7 +63,7 @@
                             </div>
                             <div class="field btn">
                                 <div class="btn-layer"></div>
-                                <input type="submit" value="Log In">
+
                             </div>
                         </form>
                         <form action="#" class="signUp">
