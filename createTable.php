@@ -46,10 +46,10 @@ if ($mysqli->query($sqlUsers) === true) {
 echo "<br>";
 
 $sqlInsertUsers = "INSERT INTO Users (username, user_email, user_pass) VALUES 
-('user1', 'p455w0rd', 'user1@example.com'),
-('user2', 'p455w0rd', 'user2@example.com'),
-('user3', 'p455w0rd', 'user3@example.com'),
-('user4', 'p455w0rd', 'user4@example.com')";
+('user1', 'user1@example.com', 'p455w0rd'),
+('user2', 'user2@example.com', 'p455w0rd'),
+('user3', 'user3@example.com', 'p455w0rd'),
+('user4', 'user4@example.com', 'p455w0rd')";
 
 if ($mysqli->query($sqlInsertUsers) === true) {
     echo "Users table data inserted successfully";
