@@ -51,7 +51,6 @@
                         <div class="slider-tab"></div>
                     </div>
                     <div class="form-inner">
-
                             <div class="field">
                                 <input type="text" placeholder="Email Address" required>
                             </div>
@@ -66,7 +65,7 @@
 
                             </div>
                         </form>
-                        <form action="#" class="signUp">
+                        <form action="signup.php" class="signUp">
                             <div class="field">
                                 <input type="text" placeholder="Email Address" required>
                             </div>
