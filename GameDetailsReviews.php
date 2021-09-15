@@ -5,16 +5,13 @@
   <title>Page Title</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <?php include 'header.php';
   ?>
-  <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
   <style>
     div {
-      padding-top: 20px;
-      padding-left: 10px;
       padding-right: 10px;
     }
 
@@ -89,10 +86,9 @@
 </head>
 
 <body>
+
   <section class="game-detail-container">
     <img src="Minecraft_cover.png" style="width:450px;height:700px;">
-
-
     <div class="GameTitleYear">
       <font size="+5">Minecraft</font>
       <font size="+2">2011</font>
