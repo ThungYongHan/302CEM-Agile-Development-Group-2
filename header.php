@@ -1,6 +1,5 @@
 <?php
-      // start new or resume existing session
-      session_start();
+  session_start();
 ?>
 
 <!DOCTYPE html>

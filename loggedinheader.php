@@ -26,11 +26,13 @@
     <title>Game Browsing Homepage</title>
 </head>
 <body>
+    
 <script>
 function LogoutFunction() {
     if (confirm('Are you sure you want to log out?'))window.location.href="GameBrowsingHomepage.php?logout='1'";
 }
 </script>
+
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #c0d3fc;">
         <div class="container">
           <a class="navbar-brand text-dark">Game Review Website</a>
