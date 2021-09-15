@@ -1,3 +1,14 @@
+<?php
+  error_reporting(0);
+  session_start();
+  $user = $_SESSION['username'];
+  if (empty($user)) {
+      include('header.php');
+  } else {
+      include('loggedinheader.php');
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +30,6 @@
     <title>Game Browsing Homepage</title>
 </head>
 <body>
- <?php include 'header.php';
-  ?>
-<!-- This is the jumbotron image section -->
-    <!-- <section id="jumbotron-section">
-    <div class="row">
-      <div id="jumbo-image" class="container py-5 text-center" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)20% ,rgba(0, 0, 0, 0.75) 100%),url(/assets/images/GI.jpg)">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-outline-light btn-lg text-uppercase" type="button">Sign up!</button>
-    </div>
-      </div>
-    </section> -->
-
     <section id ="jumbotron-section">
       <div class="row">
         <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(assets/images/GI.jpg)">
@@ -159,3 +157,5 @@
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
+
+
