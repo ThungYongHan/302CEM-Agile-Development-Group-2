@@ -46,7 +46,7 @@
                     <div class="slide-controls">
                         <input type="radio" name="slide" id="login" checked>
                         <input type="radio" name="slide" id="signup">
-                        <label for="login" class="slide login">Login</label>
+                        <label for="login" class="slide login">Login Testing</label>
                         <label for="signup" class="slide signup">SignUp</label>
                         <div class="slider-tab"></div>
                     </div>
