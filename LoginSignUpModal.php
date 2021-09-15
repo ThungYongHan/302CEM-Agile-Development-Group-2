@@ -63,6 +63,7 @@
                             </div>
                             <div class="field btn">
                                 <div class="btn-layer"></div>
+                                <input type="submit" value="LogIn">
                             </div>
                         </form>
                         <form action="signup.php" class="signUp">
