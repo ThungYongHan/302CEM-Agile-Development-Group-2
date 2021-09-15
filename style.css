@@ -5,13 +5,6 @@
     font-family: 'Lato';
 }
 
-html,
-body {
-    display: grid;
-    place-items: center;
-    background: -webkit-linear-gradient(left, #050505, #000000);
-}
-
  ::selection {
     background: #000000;
     color: #fff;
@@ -35,7 +28,7 @@ body {
     font-size: 75px;
     font-weight: 600;
     text-align: center;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 }
 
 .wrapper .slide-controls {
@@ -75,7 +68,7 @@ body {
     z-index: 0;
     border-radius: 5px;
     background: -webkit-linear-gradient(left, #1506eb, #41258b);
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 }
 
 input[type="radio"] {
@@ -117,7 +110,7 @@ input[type="radio"] {
 
 .form-container .form-inner form {
     width: 50%;
-    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    /* transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
 }
 
 .form-inner form .field {
