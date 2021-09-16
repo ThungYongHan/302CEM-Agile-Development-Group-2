@@ -4,7 +4,8 @@
 
 function emptyUsernameAlert()
 {
-    echo "
+    echo
+    "
     <script>
          window.alert('Username field cannot be empty!');
          window.location.href='LoginSignUpModal.php';
@@ -14,7 +15,8 @@ function emptyUsernameAlert()
 
 function emptyPasswordAlert()
 {
-    echo "
+    echo
+    "
     <script>
         window.alert('Password field cannot be empty!');
         window.location.href='LoginSignUpModal.php';
@@ -24,7 +26,8 @@ function emptyPasswordAlert()
 
 function invalidLoginAlert()
 {
-    echo "
+    echo
+    "
     <script>
         window.alert('Invalid username and password combination!');
         window.location.href='LoginSignUpModal.php';
