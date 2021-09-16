@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +23,8 @@
 </head>
 <body>
     <!-- This is the navigation header -->
-    <?php
-    echo '<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #c0d3fc;">
+    
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #c0d3fc;">
         <div class="container">
           <a class="navbar-brand text-dark">Game Review Website</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,13 +39,12 @@
                   <input type="text" class="form-control me-3" placeholder="Search for games..." aria-label="Games" aria-describedby="search-func">
                 </div>
                 <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
-                 <button class="btn btn-secondary" type="button" id="login">Login</button>
+                 <a href="LoginSignUpModal.php" button class="btn btn-secondary" type="button" id="login">Login</button></a>
           </div>
         
         </div>
     </form>
-      </nav>'
-?>
+      </nav>
 </body>
 <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
 <!-- Option 1: Bootstrap Bundle with Popper -->
