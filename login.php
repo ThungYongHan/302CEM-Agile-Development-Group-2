@@ -22,17 +22,25 @@ function emptyPasswordAlert()
     ";
 }
 
+function invalidLoginAlert()
+{
+    echo "
+    <script>
+        window.alert('Invalid username and password combination!');
+        window.location.href='LoginSignUpModal.php';
+    </script>
+    ";
+}
+
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
     $password = mysqli_real_escape_string($db, $_POST['password']);
 
     if (empty($username)) {
         emptyUsernameAlert();
-        // echo "Username field cannot be empty!";
     }
     if (empty($password)) {
         emptyPasswordAlert();
-        // echo "Password field cannot be empty!";
     }
 
     if ((!empty($username)) && (!empty($password))) {
@@ -42,7 +50,7 @@ if (isset($_POST['login_user'])) {
             $_SESSION['username'] = $username;
             header('Location: http://localhost:8080\AgileDev\GameBrowsingHomepage.php');
         } else {
-            echo "Invalid username and password combination!";
+            invalidLoginAlert();
         }
     }
 }
