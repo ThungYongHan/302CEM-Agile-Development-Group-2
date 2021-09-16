@@ -6,9 +6,9 @@ if ($mysqli -> connect_errno) {
 
 $sql = "CREATE DATABASE GameReviewWebsite";
 if ($mysqli->query($sql) === true) {
-    echo "Database created successfully";
+    echo "GameReviewWebsite database created successfully";
 } else {
-    echo "Error creating database: " . $mysqli->error;
+    echo "Error creating GameReviewWebsite sdatabase: " . $mysqli->error;
 }
 
 $mysqli->close();
