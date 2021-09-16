@@ -16,12 +16,15 @@ PRIMARY KEY (user_id)
 $sqlReviews = "CREATE TABLE IF NOT EXISTS Reviews (
 review_id INT(6) AUTO_INCREMENT,
 user_id INT,
+game_id INT,
 user_review VARCHAR(256) NOT NULL,
 review_num INT(6) NOT NULL,
 review_datetime DATETIME NOT NULL,
 PRIMARY KEY (review_id),
 CONSTRAINT FK_reviewuser_id FOREIGN KEY (user_id) 
-REFERENCES Users(user_id)
+REFERENCES Users(user_id),
+CONSTRAINT FK_reviewgame_id FOREIGN KEY (game_id) 
+REFERENCES Games(game_id)
 )";
 
 $sqlGames = "CREATE TABLE IF NOT EXISTS Games (
@@ -48,8 +51,11 @@ echo "<br>";
 $sqlInsertUsers = "INSERT INTO Users (username, user_email, user_pass) VALUES 
 ('user1', 'user1@example.com', 'p455w0rd'),
 ('user2', 'user2@example.com', 'p455w0rd'),
-('user3', 'user3@example.com', 'p455w0rd'),
-('user4', 'user4@example.com', 'p455w0rd')";
+('user3', 'user3@example.com', 'p455w0rd')";
+
+$sqlInsertReviews = "INSERT INTO Reviews (FK_reviewuser_id, FK_reviewgame_id, user_review, review_num, review_datetime) VALUES 
+(SELECT user_id FROM Users WHERE username ='user1', SELECT game_id FROM Games WHERE game_name ='Genshin Impact', 'Genshin Impact is a more traditional RPG with a load of cues taken from MMOs and grindy mobile games, its rewards feed into a complex system that is surprisingly engrossing.', '1', '2020-12-30'),
+(SELECT user_id FROM Users WHERE username ='user2', SELECT game_id FROM Games WHERE game_name ='League of Legends', 'League of legends is one of the biggest games out there right now.', '1', '2020-12-30')";
 
 if ($mysqli->query($sqlInsertUsers) === true) {
     echo "Users table data inserted successfully";
