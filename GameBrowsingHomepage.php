@@ -53,98 +53,43 @@
                 <hr class="me-auto">
                   <!-- ========= card-style-1 start ========= -->
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/placeholdertest.png"
-                          alt="placeholder1"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/anotherposter.jpg"
-                          alt="placeholder2"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                     
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/anotherposter.jpg"
-                          alt="placeholder3"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
+
+            <?php
+ $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
+  $query = "SELECT * FROM games ORDER BY game_id ASC";
+  $result = mysqli_query($connect, $query);
+  while($row = mysqli_fetch_array($result))
+  {
+   print'
+
+  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+  <div class="card-style-1 mb-30">
+    <div class="card-meta">
+    </div>
+    <div class="card-image">
+        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover'] ).'"
+          alt="placeholder" style="width: 252px; height: 383px;" />
+    </div>
+    <div class="card-content">
+      <h4><a href="#0"> '.$row['game_name'].' </a></h4>
+      <p>'.$row['game_desc'].'</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-outline-light">View</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end card-->
+</div>
+<!-- end col -->
+
+   ';
+  }
+    ?>
+<!-- End column -->
               </div>
+
               <!-- end row -->
               <!-- ========= card-style-1 end ========= -->
                 </div>
