@@ -87,9 +87,9 @@
    ';
   }
     ?>
-
-
+<!-- End column -->
               </div>
+
               <!-- end row -->
               <!-- ========= card-style-1 end ========= -->
                 </div>
