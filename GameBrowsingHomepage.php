@@ -95,7 +95,7 @@
                       </a>
                     </div>
                     <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
+                      <h4><a href="#0"> Minecraft </a></h4>
                       <p>
                         With supporting text below as a natural lead-in to
                         additional content. consectetur adipiscing elit. Integer
