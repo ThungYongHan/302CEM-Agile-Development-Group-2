@@ -42,8 +42,6 @@ function LogoutFunction() {
                 </div>
                    <?php if (isset($_SESSION['username'])) : ?>
                     <a class="navbar-brand text-dark">Welcome, <?php echo $_SESSION['username']; ?></a>
-                    <!-- <button type="button" button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button> -->
-
                      <button class="btn btn-secondary" button type="button" onclick="LogoutFunction()">LogOut</button>
                   <?php endif ?>
             </form>
