@@ -1,3 +1,16 @@
+<?php
+  error_reporting(0);
+  session_start();
+   $title = "Game Browsing Homepage";
+  $user = $_SESSION['username'];
+  if (empty($user)) {
+      include('header.php');
+  } else {
+      include('loggedinheader.php');
+  }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +32,6 @@
     <title>Game Browsing Homepage</title>
 </head>
 <body>
- <?php include 'header.php';
-  ?>
-<!-- This is the jumbotron image section -->
-    <!-- <section id="jumbotron-section">
-    <div class="row">
-      <div id="jumbo-image" class="container py-5 text-center" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)20% ,rgba(0, 0, 0, 0.75) 100%),url(/assets/images/GI.jpg)">
-        <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-        <p class="fs-4">Using a series of utilities, you can create this jumbotron, just like the one in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it to your liking.</p>
-        <button class="btn btn-outline-light btn-lg text-uppercase" type="button">Sign up!</button>
-    </div>
-      </div>
-    </section> -->
-
     <section id ="jumbotron-section">
       <div class="row">
         <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(assets/images/GI.jpg)">
@@ -55,98 +55,43 @@
                 <hr class="me-auto">
                   <!-- ========= card-style-1 start ========= -->
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/placeholdertest.png"
-                          alt="placeholder1"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/anotherposter.jpg"
-                          alt="placeholder2"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                  <div class="card-style-1 mb-30">
-                    <div class="card-meta">
-                     
-                    </div>
-                    <div class="card-image">
-                      <a href="#0">
-                        <img
-                          src="assets/images/anotherposter.jpg"
-                          alt="placeholder3"
-                        />
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <h4><a href="#0"> Card Title here </a></h4>
-                      <p>
-                        With supporting text below as a natural lead-in to
-                        additional content. consectetur adipiscing elit. Integer
-                        posuere erat a ante.
-                      </p>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                          <button type="button" class="btn btn-sm btn-outline-light">View</button>
-                        </div>
-                       
-                      </div>
-                    </div>
-                  </div>
-                  <!-- end card-->
-                </div>
-                <!-- end col -->
+
+            <?php
+ $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
+  $query = "SELECT * FROM games ORDER BY game_id ASC";
+  $result = mysqli_query($connect, $query);
+  while($row = mysqli_fetch_array($result))
+  {
+   print'
+
+  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+  <div class="card-style-1 mb-30">
+    <div class="card-meta">
+    </div>
+    <div class="card-image">
+        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover'] ).'"
+          alt="placeholder" style="width: 252px; height: 383px;" />
+    </div>
+    <div class="card-content">
+      <h4><a href="#0"> '.$row['game_name'].' </a></h4>
+      <p>'.$row['game_desc'].'</p>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <a type="button" class="btn btn-sm btn-outline-light" href='.$row['game_id'].'.php>View</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end card-->
+</div>
+<!-- end col -->
+
+   ';
+  }
+    ?>
+<!-- End column -->
               </div>
+
               <!-- end row -->
               <!-- ========= card-style-1 end ========= -->
                 </div>
@@ -159,3 +104,5 @@
 <!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
+
+
