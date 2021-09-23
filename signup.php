@@ -76,7 +76,7 @@
                         </script>";
                 }
             }
-            echo "<script>window.location.href='LoginSignUpModal.php';</script>";
+            echo "<script>window.location.href='GameBrowsingHomepage.php';</script>";
             mysqli_close($conn);
         }    
         
