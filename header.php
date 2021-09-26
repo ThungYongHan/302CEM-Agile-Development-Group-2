@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Game Browsing Homepage</title>
+    <title><?php echo $title;?></title>
 
 <style>
     * {
@@ -235,7 +235,7 @@
     
     <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #c0d3fc;">
         <div class="container">
-          <a class="navbar-brand text-dark">Game Review Website</a>
+          <a href="GameBrowsingHomepage.php" class="navbar-brand text-dark">Game Review Website</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -259,13 +259,13 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Game Review Login</h5>
+          <h5 class="modal-title text-dark" id="exampleModalLabel">Game Review Login</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
   <!-- Login Modal -->
             <div class="wrapper">
-                <div class="title-text">
+                <div class="title-text text-dark">
                     <div class="title login">
                         Login
                     </div>
@@ -282,30 +282,33 @@
                         <div class="slider-tab"></div>
                     </div>
                     <div class="form-inner">
-                        <form action="login.php" class="login">
+                        <form method="POST" class="login" action="login.php" >
                             <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" name="username" placeholder="Username" required>
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Password" required>
+                                <input type="password" name="password" placeholder="Password" required>
                             </div>
                             <div class="field btn2">
                                 <div class="btn-layer2"></div>
-                                <input type="submit" value="Login">
+                                <input type="submit" name="login_user" value="Login">
                             </div>
                         </form>
-                        <form action="#" class="signUp">
+                        <form action="signup.php" class="signUp" method="post">
                             <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" placeholder="Username" name="user_name" required>
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Password" required>
+                                <input type="text" placeholder="Email Address" name="user_email" required>
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Confirm password" required>
+                                <input type="password" placeholder="Password" name="user_password" required>
                             </div>
-                            <div class="field btn2">
-                                <div class="btn-layer2"></div>
+                            <div class="field">
+                                <input type="password" placeholder="Confirm password" name="confirm_password" required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
                                 <input type="submit" value="SignUp">
                             </div>
                         </form>
