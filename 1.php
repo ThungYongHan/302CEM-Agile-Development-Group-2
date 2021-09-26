@@ -90,7 +90,7 @@ include ("header.php");
 
 <body>
 <section class="game-detail-container">
-    <img src="covers/Genshin_cover.jpg" style="width:450px;height:700px;">
+    <img src="Genshin_cover.jpg" style="width:450px;height:700px;">
     <!-- <div class="GameTitleYear"> -->
       <?php 
       $link = mysqli_connect("localhost", "root", "", "gamereviewwebsite");
@@ -103,12 +103,15 @@ include ("header.php");
       //header('Content-Type:'.$row['mime']);
        
       // Attempt select query execution
-      $sql = "SELECT * FROM games WHERE game_id = 1;";
+      $sql = "SELECT * 
+      FROM games
+      LEFT JOIN users ON games.user_id = users.user_id
+      WHERE game_id=1";
       $result=mysqli_query($link,$sql);
-      $resultCheck = mysqli_num_rows($result);
+      // $resultCheck = mysqli_num_rows($result);
 
-      if($resultCheck > 0){
-        while($row =mysqli_fetch_assoc($result)){
+      
+        while($row =mysqli_fetch_array($result)){
           echo '<div class="GameTitleYear">';
            echo '<h2>'.$row['game_name'].'</h2>';
            echo '<p class="text-small">'.$row['game_year'].'</p>';
@@ -121,10 +124,10 @@ include ("header.php");
            echo '<ul>';
            echo '<li style="list-style-type:none;">Published By:'.$row['game_year'].'</li><br>';
            echo '<li style="list-style-type:none;">Added On:'. $row['game_datetime'].'</li><br>';
-           echo '<li style="list-style-type:none;">Added By:'.$row['user_id'].'</li><br>';
+           echo '<li style="list-style-type:none;">Added By:'.$row['username'].'</li><br>';
          echo '</div>';
          echo '</div>';
-        }
+        
       }
       
       ?>
@@ -161,16 +164,18 @@ if($link === false){
 }
  
 // Attempt select query execution
-$sql = "SELECT * FROM reviews WHERE game_id=1";
+$sql = "SELECT * 
+FROM reviews 
+LEFT JOIN users ON reviews.user_id = users.user_id
+WHERE game_id=4";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
      
         echo '<table class="table text-light">'; 
         echo '<thead>';
             echo "<tr>";
-               echo "<th>review_id</th>";
-                echo "<th>user_id</th>";
-                echo "<th>game_id</th>";
+               
+                echo "<th>username</th>";
                 echo "<th>user_review</th>";
                 echo "<th>review_num</th>";
                 echo "<th>review_datetime</th>";
@@ -179,9 +184,8 @@ if($result = mysqli_query($link, $sql)){
         while($row = mysqli_fetch_array($result)){
           echo '<tbody>';
             echo "<tr>";
-                echo "<td>" . $row['review_id'] . "</td>";
-                echo "<td>" . $row['user_id'] . "</td>";
-                echo "<td>" . $row['game_id'] . "</td>";
+            
+                echo "<td>" . $row['username'] . "</td>";
                 echo "<td>" . $row['user_review'] . "</td>";
                 echo "<td>" . $row['review_num'] . "</td>";
                 echo "<td>" . $row['review_datetime'] . "</td>";
