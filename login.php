@@ -69,7 +69,7 @@ if (isset($_POST['login_user'])) {
             invalidPasswordAlert();
         } elseif (mysqli_num_rows($results) == 1) {
             $_SESSION['username'] = $username;
-            header('Location: http://localhost:8080\AgileDev\GameBrowsingHomepage.php');
+            header('Location: http://localhost:8080/302CEM-Agile-Development-Group-2-testmerge/GameBrowsingHomepage.php');
         } else {
             invalidLoginAlert();
         }
