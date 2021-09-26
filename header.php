@@ -294,18 +294,21 @@
                                 <input type="submit" name="login_user" value="Login">
                             </div>
                         </form>
-                        <form action="#" class="signUp">
+                        <form action="signup.php" class="signUp" method="post">
                             <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" placeholder="Username" name="user_name" required>
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Password" required>
+                                <input type="text" placeholder="Email Address" name="user_email" required>
                             </div>
                             <div class="field">
-                                <input type="password" placeholder="Confirm password" required>
+                                <input type="password" placeholder="Password" name="user_password" required>
                             </div>
-                            <div class="field btn2">
-                                <div class="btn-layer2"></div>
+                            <div class="field">
+                                <input type="password" placeholder="Confirm password" name="confirm_password" required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
                                 <input type="submit" value="SignUp">
                             </div>
                         </form>
