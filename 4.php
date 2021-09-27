@@ -174,11 +174,10 @@ if($result = mysqli_query($link, $sql)){
         echo '<table class="table text-light">'; 
         echo '<thead>';
             echo "<tr>";
-               
-                echo "<th>username</th>";
-                echo "<th>user_review</th>";
-                echo "<th>review_num</th>";
-                echo "<th>review_datetime</th>";
+            echo "<th>Username</th>";
+            echo "<th>Review</th>";
+            echo "<th>Ratings</th>";
+            echo "<th>Date posted</th>";
             echo "</tr>";
             echo '</thead>';
         while($row = mysqli_fetch_array($result)){
