@@ -123,7 +123,7 @@ include ("header.php");
            echo ' <div class="PublisherUserInfo py-5">';
            echo '<ul>';
            echo '<li style="list-style-type:none;">Published By:'.$row['game_year'].'</li><br>';
-           echo '<li style="list-style-type:none;">Added On:'. $row['game_datetime'].'</li><br>';
+           echo '<li style="list-style-type:none;">Added On:'. date('d/m/Y', strtotime($row['game_datetime'])).'</li><br>';
            echo '<li style="list-style-type:none;">Added By:'.$row['username'].'</li><br>';
          echo '</div>';
          echo '</div>';
@@ -167,7 +167,7 @@ if($link === false){
 $sql = "SELECT * 
 FROM reviews 
 LEFT JOIN users ON reviews.user_id = users.user_id
-WHERE game_id=4";
+WHERE game_id=1";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
      
@@ -175,10 +175,10 @@ if($result = mysqli_query($link, $sql)){
         echo '<thead>';
             echo "<tr>";
                
-                echo "<th>username</th>";
-                echo "<th>user_review</th>";
-                echo "<th>review_num</th>";
-                echo "<th>review_datetime</th>";
+            echo "<th>Username</th>";
+            echo "<th>Review</th>";
+            echo "<th>Ratings</th>";
+            echo "<th>Date posted</th>";
             echo "</tr>";
             echo '</thead>';
         while($row = mysqli_fetch_array($result)){
@@ -188,7 +188,8 @@ if($result = mysqli_query($link, $sql)){
                 echo "<td>" . $row['username'] . "</td>";
                 echo "<td>" . $row['user_review'] . "</td>";
                 echo "<td>" . $row['review_num'] . "</td>";
-                echo "<td>" . $row['review_datetime'] . "</td>";
+                echo "<td>" . date('d/m/Y', strtotime($row['review_datetime'])). "</td>";
+                // date('Y:m:d', strtotime($date))
             echo "</tr>";
             echo '</tbody>';
         }

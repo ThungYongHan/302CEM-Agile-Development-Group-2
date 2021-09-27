@@ -123,7 +123,7 @@ include ("header.php");
            echo ' <div class="PublisherUserInfo py-5">';
            echo '<ul>';
            echo '<li style="list-style-type:none;">Published By:'.$row['game_year'].'</li><br>';
-           echo '<li style="list-style-type:none;">Added On:'. $row['game_datetime'].'</li><br>';
+           echo '<li style="list-style-type:none;">Added On:'. date('d/m/Y', strtotime ($row['game_datetime'])).'</li><br>';
            echo '<li style="list-style-type:none;">Added By:'.$row['username'].'</li><br>';
          echo '</div>';
          echo '</div>';
@@ -188,7 +188,7 @@ if($result = mysqli_query($link, $sql)){
                 echo "<td>" . $row['username'] . "</td>";
                 echo "<td>" . $row['user_review'] . "</td>";
                 echo "<td>" . $row['review_num'] . "</td>";
-                echo "<td>" . $row['review_datetime'] . "</td>";
+                echo "<td>" . date('d/m/Y', strtotime($row['review_datetime'])). "</td>";
             echo "</tr>";
             echo '</tbody>';
         }
