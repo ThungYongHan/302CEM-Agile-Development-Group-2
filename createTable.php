@@ -109,4 +109,3 @@ if ($mysqli->query($sqlInsertReviews) === true) {
 echo "<br>";
 
 $mysqli->close();
-
