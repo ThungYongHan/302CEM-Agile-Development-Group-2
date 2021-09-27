@@ -34,7 +34,7 @@
 <body>
     <section id ="jumbotron-section">
       <div class="row">
-        <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(assets/images/GI.jpg)">
+        <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(images/GI.jpg)">
         <h1 class="display-5">Welcome to the Game Review Website</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
         <!-- <hr class="my-4"> -->
@@ -73,11 +73,11 @@
           alt="placeholder" style="width: 252px; height: 383px;" />
     </div>
     <div class="card-content">
-      <h4><a href="#0"> '.$row['game_name'].' </a></h4>
+      <h4> '.$row['game_name'].' </h4>
       <p>'.$row['game_desc'].'</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <a type="button" class="btn btn-sm btn-outline-light" href='.$row['game_id'].'.php>View</a>
+          <button type="button" class="btn btn-primary" onclick="document.location=\''.$row['game_id'].'.php\'">View</button>
         </div>
       </div>
     </div>
