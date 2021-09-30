@@ -2,7 +2,7 @@
     if (isset($_GET['logout'])) {
         session_destroy();
         unset($_SESSION['username']);
-        header("location: http://localhost:8080/AgileDev/GameBrowsingHomepage.php");
+        header('Location: http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
     }
 ?>
 
