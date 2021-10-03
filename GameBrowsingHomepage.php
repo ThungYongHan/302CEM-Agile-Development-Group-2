@@ -73,11 +73,11 @@
           alt="placeholder" style="width: 252px; height: 383px;" />
     </div>
     <div class="card-content">
-      <h4><a href="#0"> '.$row['game_name'].' </a></h4>
+      <h4> '.$row['game_name'].' </h4>
       <p>'.$row['game_desc'].'</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <a type="button" class="btn btn-sm btn-outline-light" href='.$row['game_id'].'.php>View</a>
+          <button type="button" class="btn btn-primary" onclick="document.location=\''.$row['game_id'].'.php\'">View</button>
         </div>
       </div>
     </div>
