@@ -8,28 +8,42 @@
   } else {
       include('loggedinheader.php');
   }
-  
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Game Browsing Homepage</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-    <!-- Google Font -->
-    <style>@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');</style>
-     <!-- Required meta tags -->
-     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-     <!-- Bootstrap CSS -->
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
- 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        h3 {
+            display: inline-block;
+        }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input,
+        textarea {
+            width: 50%;
+            margin-bottom: 3vh;
+            border-radius: 1vh;
+            font-size: 8vw;
+        }
+        form.testform {
+            background: rgb(130, 117, 189);
+            padding: 50px 50px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Game Browsing Homepage</title>
+
 </head>
 <body>
     <section id ="jumbotron-section">
@@ -37,7 +51,6 @@
         <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(images/GI.jpg)">
         <h1 class="display-5">Welcome to the Game Review Website</h1>
         <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <!-- <hr class="my-4"> -->
         <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
         <p class="lead">
           <a class="btn btn-outline-dark btn-lg" href="#" role="button">Learn more</a>
@@ -47,14 +60,68 @@
     </section>
 
     <section id="review">
-        <!-- This is the review section -->
         <div class="row">
             <div class="col-12">
                 <div class="container py-5">
-                <h3>Games on the shelf...</h3>
+                <h3>Games On The Shelf </h3>
+                    <?php
+                    if (!empty($user)) {
+                        ?>
+                    <button type="button" button class="btn btn-secondary ms-3 mb-3" data-bs-toggle="modal" data-bs-target="#addGameModal">Add Game</button>
+                    <?php
+                    }
+                    ?>
                 <hr class="me-auto">
-                  <!-- ========= card-style-1 start ========= -->
             <div class="row">
+
+
+                <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                                <form class="testform">
+                                <!-- <form method="POST" class="testform" action="addGameDetails.php" > -->
+                                    <h3>Add Games</h3>
+                                    <div class="mb-3">
+                                        <label for="GameName" class="form-label">Game Name</label>
+                                        <input type="text" class="form-control" id="GameName" aria-describedby="gameHelp" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Game Description</label>
+                                        <textarea
+                                                class="form-control"
+                                                id="exampleFormControlTextarea1"
+                                                rows="3"
+                                        ></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="publisher" class="form-label">Game Publisher</label>
+                                        <input type="text" class="form-control" id="publisher" aria-describedby="gameHelp" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Game Cover Image</label>
+                                        <input class="form-control" type="file" id="formFile" />
+                                    </div>
+                                    <label for="customRange" class="form-label">Year Published</label>
+                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange">
+                                    <p>Year: <span id="demo"></span></p><br>
+
+<script>
+var slider = document.getElementById("customRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
+
 
             <?php
  $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
@@ -63,7 +130,6 @@
   while($row = mysqli_fetch_array($result))
   {
    print'
-
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
   <div class="card-style-1 mb-30">
     <div class="card-meta">
@@ -82,26 +148,16 @@
       </div>
     </div>
   </div>
-  <!-- end card-->
 </div>
-<!-- end col -->
-
    ';
   }
     ?>
-<!-- End column -->
               </div>
-
-              <!-- end row -->
-              <!-- ========= card-style-1 end ========= -->
                 </div>
             </div>
         </div>
     </section>
-
 </body>
-<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-<!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
 
