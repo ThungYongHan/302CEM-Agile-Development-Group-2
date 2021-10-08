@@ -105,7 +105,7 @@ include ("header.php");
 
 <body>
 <section class="game-detail-container">
-    <img src="Genshin_cover.jpg" style="width:450px;height:700px;" alt="Genshin Impact">
+    <img src="images/Genshin_cover.jpg" style="width:450px;height:700px;" alt="Genshin Impact">
     <!-- <div class="GameTitleYear"> -->
       <?php 
       $link = mysqli_connect("localhost", "root", "", "gamereviewwebsite");

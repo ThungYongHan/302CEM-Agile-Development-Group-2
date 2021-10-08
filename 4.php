@@ -105,7 +105,7 @@ include ("header.php");
 
 <body>
 <section class="game-detail-container">
-    <img src="Minecraft_cover.jpeg" style="width:450px;height:700px;">
+    <img src="images/Minecraft_cover.jpeg" style="width:450px;height:700px;">
     <!-- <div class="GameTitleYear"> -->
       <?php 
       $link = mysqli_connect("localhost", "root", "", "gamereviewwebsite");
