@@ -23,6 +23,23 @@
             display: inline-block;
         }
     </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input,
+        textarea {
+            width: 50%;
+            margin-bottom: 3vh;
+            border-radius: 1vh;
+            font-size: 8vw;
+        }
+        form.testform {
+            background: rgb(130, 117, 189);
+            padding: 50px 50px;
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -50,25 +67,57 @@
                     <?php
                     if (!empty($user)) {
                         ?>
-                    <button type="button" button class="btn btn-secondary ms-3 mb-3" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Game</button>
+                    <button type="button" button class="btn btn-secondary ms-3 mb-3" data-bs-toggle="modal" data-bs-target="#addGameModal">Add Game</button>
                     <?php
                     }
                     ?>
                 <hr class="me-auto">
             <div class="row">
+                <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                                <form class="testform ">
+                                    <h3>Add Games</h3>
+                                    <div class="mb-3">
+                                        <label for="GameName" class="form-label">Game Name</label>
+                                        <input type="text" class="form-control" id="GameName" aria-describedby="gameHelp" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">Game Description</label>
+                                        <textarea
+                                                class="form-control"
+                                                id="exampleFormControlTextarea1"
+                                                rows="3"
+                                        ></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="year" class="form-label">Year Added</label>
+                                        <input type="number" class="form-control" id="year" aria-describedby="gameHelp" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="formFile" class="form-label">Default file input example</label
+                                        >
+                                        <input class="form-control" type="file" id="formFile" />
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                        </div>
+                    </div>
+                </div>
             <?php
  $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
   $query = "SELECT * FROM games ORDER BY game_id ASC";
   $result = mysqli_query($connect, $query);
-  while ($row = mysqli_fetch_array($result)) {
-      print'
-
+  while($row = mysqli_fetch_array($result))
+  {
+   print'
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
   <div class="card-style-1 mb-30">
     <div class="card-meta">
     </div>
     <div class="card-image">
-        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover']).'"
+        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover'] ).'"
           alt="placeholder" style="width: 252px; height: 383px;" />
     </div>
     <div class="card-content">
