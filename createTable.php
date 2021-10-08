@@ -1,7 +1,7 @@
 <?php
 $mysqli = new mysqli("localhost", "root", "", "GameReviewWebsite");
 if ($mysqli -> connect_errno) {
-    die("Connection failed: " . $mysqli->connect_error);
+    die("Connection to GameReviewWebsite failed: " . $mysqli->connect_error);
 }
 
 $sqlUsers = "CREATE TABLE IF NOT EXISTS Users (
