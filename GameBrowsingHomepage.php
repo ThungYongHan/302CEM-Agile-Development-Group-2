@@ -73,10 +73,13 @@
                     ?>
                 <hr class="me-auto">
             <div class="row">
+
+
                 <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                                <form class="testform ">
+                                <form class="testform">
+                                <!-- <form method="POST" class="testform" action="addGameDetails.php" > -->
                                     <h3>Add Games</h3>
                                     <div class="mb-3">
                                         <label for="GameName" class="form-label">Game Name</label>
@@ -91,20 +94,35 @@
                                         ></textarea>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="year" class="form-label">Year Added</label>
-                                        <input type="number" class="form-control" id="year" aria-describedby="gameHelp" />
+                                        <label for="publisher" class="form-label">Game Publisher</label>
+                                        <input type="text" class="form-control" id="publisher" aria-describedby="gameHelp" />
                                     </div>
                                     <div class="mb-3">
-                                        <label for="formFile" class="form-label">Default file input example</label
-                                        >
+                                        <label for="formFile" class="form-label">Game Cover Image</label>
                                         <input class="form-control" type="file" id="formFile" />
                                     </div>
+                                    <label for="customRange" class="form-label">Year Published</label>
+                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange">
+                                    <p>Year: <span id="demo"></span></p><br>
+
+<script>
+var slider = document.getElementById("customRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                         </div>
                     </div>
                 </div>
+
+
             <?php
  $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
   $query = "SELECT * FROM games ORDER BY game_id ASC";
