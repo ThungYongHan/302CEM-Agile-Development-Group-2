@@ -98,8 +98,7 @@ echo "<br>";
 
 if ($mysqli->query($sqlInsertGames) === true) {
     echo "Games table data inserted successfully";
-}
-else {
+} else {
     echo "Error inserting Games table data: " . $mysqli->error;
 }
 echo "<br>";
