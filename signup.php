@@ -120,7 +120,7 @@ function userRegistration($user_name, $user_email, $user_pass, $user_confirm_pas
                 
                 if(mysqli_query($conn, $sql)){
                     //Send confirmation email
-                    $link = "<a href='http://localhost/302CEM-Agile-Development-Group-2-master/verification.php?key=".$username."&vkey=".$token."'>Confirm Account</a>";                    
+                    $link = "<a href='http://localhost:8080/302CEM-Agile-Development-Group-2-master/verification.php?key=".$username."&vkey=".$token."'>Confirm Account</a>";                    
 
 
                     $mail = new PHPMailer();
