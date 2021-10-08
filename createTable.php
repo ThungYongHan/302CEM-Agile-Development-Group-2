@@ -9,6 +9,8 @@ user_id INT(6) AUTO_INCREMENT,
 username VARCHAR(256) NOT NULL,
 user_email VARCHAR(256) NOT NULL,
 user_pass VARCHAR(256) NOT NULL,
+vkey VARCHAR(50) NOT NULL,
+status VARCHAR(10) NOT NULL DEFAULT '0',
 PRIMARY KEY (user_id)
 )";
 

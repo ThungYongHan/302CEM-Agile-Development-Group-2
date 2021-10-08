@@ -19,18 +19,25 @@ function loginUser($username, $password)
         }
 
         if ((!empty($username)) && (!empty($password))) {
-            $query = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password'";
+            $query = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password' AND status='Verified'";
             $usernamequery = "SELECT * FROM Users WHERE username='$username'";
+            $usernameeverifiedquery = "SELECT * FROM Users WHERE username='$username' AND status='Verified'";
 
             $results = mysqli_query($db, $query);
             $usernameresults = mysqli_query($db, $usernamequery);
+            $verifyresults = mysqli_query($db,$usernameeverifiedquery);
 
             if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($results) != 1) {
                 invalidPasswordAlert();
-            } elseif (mysqli_num_rows($results) == 1) {
+            }
+            elseif (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($verifyresults) != 1 ) {
+                unverifiedEmailAlert();
+            }
+            elseif (mysqli_num_rows($results) == 1) {
                 $_SESSION['username'] = $username;
                 header('Location: http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
-            } else {
+            }
+            else {
                 invalidLoginAlert();
             }
         }
@@ -76,6 +83,17 @@ function invalidPasswordAlert()
     "
     <script>
         window.alert('Username is found in database but the password is incorrect!');
+        window.location.href='GameBrowsingHomepage.php';
+    </script>
+    ";
+}
+
+function unverifiedEmailAlert()
+{
+    echo
+    "
+    <script>
+        window.alert('Please verify your email address before logging in!');
         window.location.href='GameBrowsingHomepage.php';
     </script>
     ";
