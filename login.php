@@ -20,7 +20,7 @@ function loginUser($username, $password)
 
         if ((!empty($username)) && (!empty($password))) {
             $query = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password' AND status='Verified'";
-            $usernamequery = "SELECT * FROM Users WHERE username='$username' AND status='Verified'";
+            $usernamequery = "SELECT * FROM Users WHERE username='$username'";
             $usernameeverifiedquery = "SELECT * FROM Users WHERE username='$username' AND status='Verified'";
 
             $results = mysqli_query($db, $query);
