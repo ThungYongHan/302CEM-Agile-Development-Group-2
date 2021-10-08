@@ -27,11 +27,12 @@ function loginUser($username, $password)
             $usernameresults = mysqli_query($db, $usernamequery);
             $verifyresults = mysqli_query($db,$usernameeverifiedquery);
 
-            if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($results) != 1) {
-                invalidPasswordAlert();
-            }
-            elseif (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($verifyresults) != 1 ) {
+
+            if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($verifyresults) != 1 ) {
                 unverifiedEmailAlert();
+            }
+            else if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($results) != 1) {
+                invalidPasswordAlert();
             }
             elseif (mysqli_num_rows($results) == 1) {
                 $_SESSION['username'] = $username;
