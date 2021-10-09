@@ -8,8 +8,7 @@
   } else {
       include('loggedinheader.php');
   }
-?>
-
+?> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,13 +72,10 @@
                     ?>
                 <hr class="me-auto">
             <div class="row">
-
-
                 <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                                 <form class="testform">
-                                <!-- <form method="POST" class="testform" action="addGameDetails.php" > -->
                                     <h3>Add Games</h3>
                                     <div class="mb-3">
                                         <label for="GameName" class="form-label">Game Name</label>
@@ -101,41 +97,37 @@
                                         <label for="formFile" class="form-label">Game Cover Image</label>
                                         <input class="form-control" type="file" id="formFile" />
                                     </div>
+
                                     <label for="customRange" class="form-label">Year Published</label>
                                     <input type="range" class="form-range" min="1980" max="2021" id="customRange">
                                     <p>Year: <span id="demo"></span></p><br>
+                                    <script>
+                                    var slider = document.getElementById("customRange");
+                                    var output = document.getElementById("demo");
+                                    output.innerHTML = slider.value;
 
-<script>
-var slider = document.getElementById("customRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value;
-
-slider.oninput = function() {
-  output.innerHTML = this.value;
-}
-</script>
-
+                                    slider.oninput = function() {
+                                    output.innerHTML = this.value;
+                                    }
+                                    </script>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                         </div>
                     </div>
                 </div>
-
-
             <?php
  $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
   $query = "SELECT * FROM games ORDER BY game_id ASC";
   $result = mysqli_query($connect, $query);
-  while($row = mysqli_fetch_array($result))
-  {
-   print'
+  while ($row = mysqli_fetch_array($result)) {
+      print'
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
   <div class="card-style-1 mb-30">
     <div class="card-meta">
     </div>
     <div class="card-image">
-        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover'] ).'"
+        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover']).'"
           alt="placeholder" style="width: 252px; height: 383px;" />
     </div>
     <div class="card-content">
