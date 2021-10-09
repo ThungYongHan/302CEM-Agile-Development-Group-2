@@ -42,8 +42,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
+
 <body>
     <section id ="jumbotron-section">
       <div class="row">
@@ -62,7 +62,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="container py-5">
-                <h3>Games On The Shelf </h3>
+                <h3>Games On The Shelf</h3>
                     <?php
                     if (!empty($user)) {
                         ?>
@@ -75,43 +75,46 @@
                 <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                                <form class="testform">
-                                    <h3>Add Games</h3>
+                                    <form method="POST" class="testform" action="login.php" >
+                                    <h2 style="color:black;">Add Game</h2>
                                     <div class="mb-3">
                                         <label for="GameName" class="form-label">Game Name</label>
-                                        <input type="text" class="form-control" id="GameName" aria-describedby="gameHelp" />
+                                        <input type="text" class="form-control" id="gamename" name="gamename" aria-describedby="gameHelp" required/>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="exampleFormControlTextarea1" class="form-label">Game Description</label>
                                         <textarea
                                                 class="form-control"
                                                 id="exampleFormControlTextarea1"
                                                 rows="3"
+                                                name="gamedescription"
+                                                required
                                         ></textarea>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="publisher" class="form-label">Game Publisher</label>
-                                        <input type="text" class="form-control" id="publisher" aria-describedby="gameHelp" />
+                                        <input type="text" class="form-control" id="gamepublisher" name="gamepublisher" aria-describedby="gameHelp" required/>
                                     </div>
+                                    
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Game Cover Image</label>
-                                        <input class="form-control" type="file" id="formFile" />
+                                        <input class="form-control" type="file" id="formFile"/>
                                     </div>
 
                                     <label for="customRange" class="form-label">Year Published</label>
-                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange">
+                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange"/>
                                     <p>Year: <span id="demo"></span></p><br>
                                     <script>
                                     var slider = document.getElementById("customRange");
                                     var output = document.getElementById("demo");
                                     output.innerHTML = slider.value;
-
                                     slider.oninput = function() {
                                     output.innerHTML = this.value;
                                     }
                                     </script>
-
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" name="add_game" class="btn btn-primary">Submit</button>
                                 </form>
                         </div>
                     </div>
