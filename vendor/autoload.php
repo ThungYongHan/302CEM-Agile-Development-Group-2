@@ -4,8 +4,4 @@
 
 require_once __DIR__ . '/composer/autoload_real.php';
 
-<<<<<<< Updated upstream
 return ComposerAutoloaderInit7052f41130593029ae170f1a5e4f26f8::getLoader();
-=======
-return ComposerAutoloaderInita10fdc83d4f5ff77907dc70314519903::getLoader();
->>>>>>> Stashed changes

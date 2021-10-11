@@ -51,8 +51,4 @@ class MockUsersTest extends TestCase
     }
 
 
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes

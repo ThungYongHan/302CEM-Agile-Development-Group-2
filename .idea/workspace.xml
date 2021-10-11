@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cartArrayUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/cartArrayUnitTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redirectUnitTestClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/redirectUnitTestClass.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/userArrayUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/userArrayUnitTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/MockUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MockUsersTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/redirectUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/redirectUnitTestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/userArrayUnitTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +112,7 @@
       <recent name="C:\xampp\htdocs\302CEM-Agile-Development-Group-2\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.redirectUnitTestTest.testOnlineRedirectOK">
+  <component name="RunManager" selected="PHPUnit.cartArrayUnitTestTest">
     <configuration name="Local Unit Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -106,50 +122,41 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="cartArrayUnitTestTest.testValidateCartTypeFalse5" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="cartArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" method="testValidateCartTypeFalse5" scope="Method" />
+    <configuration name="MockUsersTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MockUsersTest" file="$PROJECT_DIR$/tests/MockUsersTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="cartArrayUnitTestTest.testValidateCartTypeTrue" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.4" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="cartArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" method="testValidateCartTypeTrue" scope="XML" />
+    <configuration name="MockUsersTest.testMockUsersAreReturned" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MockUsersTest" file="$PROJECT_DIR$/tests/MockUsersTest.php" method="testMockUsersAreReturned" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP 7.4" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
-      <TestRunner class="userArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" method="testValidateUserIsArray" scope="XML" use_alternative_configuration_file="true" />
+    <configuration name="cartArrayUnitTestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="cartArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="redirectUnitTestTest.testOnlineRedirectOK" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="redirectUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/redirectUnitTestTest.php" method="testOnlineRedirectOK" scope="Method" use_alternative_configuration_file="true" />
+    <configuration name="userArrayUnitTestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="userArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="userArrayUnitTestTest.testValidateUserKey" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="userArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" method="testValidateUserKey" scope="Class" />
+      <TestRunner class="userArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" method="testValidateUserKey" scope="Method" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="PHPUnit.Local Unit Tests" />
+      <item itemvalue="PHPUnit.MockUsersTest.testMockUsersAreReturned" />
+      <item itemvalue="PHPUnit.MockUsersTest" />
+      <item itemvalue="PHPUnit.userArrayUnitTestTest" />
       <item itemvalue="PHPUnit.userArrayUnitTestTest.testValidateUserKey" />
-      <item itemvalue="PHPUnit.phpunit.xml" />
-      <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartTypeTrue" />
-      <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartTypeFalse5" />
-      <item itemvalue="PHPUnit.redirectUnitTestTest.testOnlineRedirectOK" />
+      <item itemvalue="PHPUnit.cartArrayUnitTestTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.redirectUnitTestTest.testOnlineRedirectOK" />
-        <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartTypeTrue" />
-        <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartTypeFalse5" />
-        <item itemvalue="PHPUnit.phpunit.xml" />
+        <item itemvalue="PHPUnit.cartArrayUnitTestTest" />
+        <item itemvalue="PHPUnit.userArrayUnitTestTest.testValidateUserKey" />
+        <item itemvalue="PHPUnit.userArrayUnitTestTest" />
+        <item itemvalue="PHPUnit.MockUsersTest" />
+        <item itemvalue="PHPUnit.MockUsersTest.testMockUsersAreReturned" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +176,7 @@
       <workItem from="1633054536887" duration="1319000" />
       <workItem from="1633196228605" duration="1335000" />
       <workItem from="1633662705092" duration="1051000" />
-      <workItem from="1633937968529" duration="299000" />
+      <workItem from="1633937968529" duration="1495000" />
     </task>
     <servers />
   </component>
