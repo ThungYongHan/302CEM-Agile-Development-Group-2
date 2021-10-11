@@ -5,7 +5,11 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
+<<<<<<< Updated upstream
         'reference' => '85cfa74dc8d5c31005eca9db9fadbfad446e3fd1',
+=======
+        'reference' => '61f936ce82f0a8806ee3827c65bff28d40fcfb71',
+>>>>>>> Stashed changes
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +20,11 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
+<<<<<<< Updated upstream
             'reference' => '85cfa74dc8d5c31005eca9db9fadbfad446e3fd1',
+=======
+            'reference' => '61f936ce82f0a8806ee3827c65bff28d40fcfb71',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -86,12 +94,21 @@
             'dev_requirement' => false,
         ),
         'phpdocumentor/type-resolver' => array(
+<<<<<<< Updated upstream
             'pretty_version' => '1.5.1',
             'version' => '1.5.1.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../phpdocumentor/type-resolver',
             'aliases' => array(),
             'reference' => 'a12f7e301eb7258bb68acd89d4aefa05c2906cae',
+=======
+            'pretty_version' => '1.5.0',
+            'version' => '1.5.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../phpdocumentor/type-resolver',
+            'aliases' => array(),
+            'reference' => '30f38bffc6f24293dadd1823936372dfa9e86e2f',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'phpspec/prophecy' => array(
@@ -329,12 +346,21 @@
             'dev_requirement' => false,
         ),
         'symfony/var-dumper' => array(
+<<<<<<< Updated upstream
             'pretty_version' => 'v5.3.8',
             'version' => '5.3.8.0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'reference' => 'eaaea4098be1c90c8285543e1356a09c8aa5c8da',
+=======
+            'pretty_version' => 'v5.3.7',
+            'version' => '5.3.7.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'reference' => '3ad5af4aed07d0a0201bbcfc42658fe6c5b2fb8f',
+>>>>>>> Stashed changes
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(

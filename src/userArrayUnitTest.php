@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <?php
 
 class userArrayUnitTest {
@@ -16,4 +19,8 @@ class userArrayUnitTest {
         return $addUser;
     }
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <?php
 
 class cartArrayUnitTest {
@@ -50,4 +53,8 @@ class cartArrayUnitTest {
         }
     }
 
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

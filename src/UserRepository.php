@@ -27,7 +27,11 @@ class UserRepository
     }
 
     /**
+<<<<<<< Updated upstream
      * Fetch an array of products from the database
+=======
+         * Fetch an array of products from the database
+>>>>>>> Stashed changes
      *
      * @return array
      */

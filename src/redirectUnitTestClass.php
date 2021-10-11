@@ -10,4 +10,8 @@ class redirectUnitTestClass {
         $_SESSION['username'] = array();
         return $_SESSION['username'];
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

@@ -66,6 +66,7 @@ class VarCloner extends AbstractCloner
                 // $v is the original value or a stub object in case of hard references
 
                 if (\PHP_VERSION_ID >= 70400) {
+<<<<<<< Updated upstream
                     $zvalRef = ($r = \ReflectionReference::fromArrayElement($vals, $k)) ? $r->getId() : null;
                 } else {
                     $refs[$k] = $cookie;
@@ -81,12 +82,26 @@ class VarCloner extends AbstractCloner
                         } else {
                             $refs[$k] = $vals[$k] = $v;
                         }
+=======
+                    $zvalIsRef = null !== \ReflectionReference::fromArrayElement($vals, $k);
+                } else {
+                    $refs[$k] = $cookie;
+                    $zvalIsRef = $vals[$k] === $cookie;
+                }
+
+                if ($zvalIsRef) {
+                    $vals[$k] = &$stub;         // Break hard references to make $queue completely
+                    unset($stub);               // independent from the original structure
+                    if ($v instanceof Stub && isset($hardRefs[spl_object_id($v)])) {
+                        $vals[$k] = $refs[$k] = $v;
+>>>>>>> Stashed changes
                         if ($v->value instanceof Stub && (Stub::TYPE_OBJECT === $v->value->type || Stub::TYPE_RESOURCE === $v->value->type)) {
                             ++$v->value->refCount;
                         }
                         ++$v->refCount;
                         continue;
                     }
+<<<<<<< Updated upstream
                     $vals[$k] = new Stub();
                     $vals[$k]->value = $v;
                     $vals[$k]->handle = ++$refsCounter;
@@ -99,6 +114,14 @@ class VarCloner extends AbstractCloner
                         $hardRefs[$h] = &$refs[$k];
                         $values[$h] = $v;
                     }
+=======
+                    $refs[$k] = $vals[$k] = new Stub();
+                    $refs[$k]->value = $v;
+                    $h = spl_object_id($refs[$k]);
+                    $hardRefs[$h] = &$refs[$k];
+                    $values[$h] = $v;
+                    $vals[$k]->handle = ++$refsCounter;
+>>>>>>> Stashed changes
                 }
                 // Create $stub when the original value $v can not be used directly
                 // If $v is a nested structure, put that structure in array $a
@@ -157,17 +180,25 @@ class VarCloner extends AbstractCloner
                                 unset($v[$gid]);
                                 $a = [];
                                 foreach ($v as $gk => &$gv) {
+<<<<<<< Updated upstream
                                     if ($v === $gv && (\PHP_VERSION_ID < 70400 || !isset($hardRefs[\ReflectionReference::fromArrayElement($v, $gk)->getId()]))) {
+=======
+                                    if ($v === $gv) {
+>>>>>>> Stashed changes
                                         unset($v);
                                         $v = new Stub();
                                         $v->value = [$v->cut = \count($gv), Stub::TYPE_ARRAY => 0];
                                         $v->handle = -1;
+<<<<<<< Updated upstream
                                         if (\PHP_VERSION_ID >= 70400) {
                                             $gv = &$a[$gk];
                                             $hardRefs[\ReflectionReference::fromArrayElement($a, $gk)->getId()] = &$gv;
                                         } else {
                                             $gv = &$hardRefs[spl_object_id($v)];
                                         }
+=======
+                                        $gv = &$hardRefs[spl_object_id($v)];
+>>>>>>> Stashed changes
                                         $gv = $v;
                                     }
 
@@ -266,12 +297,19 @@ class VarCloner extends AbstractCloner
                     }
                 }
 
+<<<<<<< Updated upstream
                 if (!$zvalRef) {
                     $vals[$k] = $stub;
                 } elseif (\PHP_VERSION_ID >= 70400) {
                     $hardRefs[$zvalRef]->value = $stub;
                 } else {
                     $refs[$k]->value = $stub;
+=======
+                if ($zvalIsRef) {
+                    $refs[$k]->value = $stub;
+                } else {
+                    $vals[$k] = $stub;
+>>>>>>> Stashed changes
                 }
             }
 
