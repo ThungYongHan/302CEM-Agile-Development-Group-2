@@ -75,7 +75,7 @@
                 <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                                    <form method="POST" class="testform" action="login.php" >
+                                    <form method="POST" class="testform" action="addGameDetails.php" enctype="multipart/form-data">
                                     <h2 style="color:black;">Add Game</h2>
                                     <div class="mb-3">
                                         <label for="GameName" class="form-label">Game Name</label>
@@ -100,11 +100,11 @@
                                     
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Game Cover Image</label>
-                                        <input class="form-control" type="file" id="formFile"/>
+                                        <input class="form-control" type="file" id="formFile" name="gamecover" required/>
                                     </div>
 
                                     <label for="customRange" class="form-label">Year Published</label>
-                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange"/>
+                                    <input type="range" class="form-range" min="1980" max="2021" id="customRange" name="gameyear" required/>
                                     <p>Year: <span id="demo"></span></p><br>
                                     <script>
                                     var slider = document.getElementById("customRange");
