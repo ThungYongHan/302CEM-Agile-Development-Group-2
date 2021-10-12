@@ -7,22 +7,6 @@
     <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cartArrayUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/cartArrayUnitTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redirectUnitTestClass.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/redirectUnitTestClass.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userArrayUnitTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/userArrayUnitTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/MockUsersTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/MockUsersTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/redirectUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/redirectUnitTestTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/userArrayUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +96,7 @@
       <recent name="C:\xampp\htdocs\302CEM-Agile-Development-Group-2\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.cartArrayUnitTestTest">
+  <component name="RunManager" selected="PHPUnit.userArrayUnitTestTest.testValidateUserKey">
     <configuration name="Local Unit Tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <CommandLine>
         <PhpTestInterpreterSettings>
@@ -122,16 +106,16 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" scope="XML" />
       <method v="2" />
     </configuration>
-    <configuration name="MockUsersTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="MockUsersTest" file="$PROJECT_DIR$/tests/MockUsersTest.php" scope="Class" />
-      <method v="2" />
-    </configuration>
-    <configuration name="MockUsersTest.testMockUsersAreReturned" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="MockUsersTest" file="$PROJECT_DIR$/tests/MockUsersTest.php" method="testMockUsersAreReturned" scope="Method" />
+    <configuration name="MockUsersTest.testMockUsers1AreReturned" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MockUsersTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/MockUsersTest.php" method="testMockUsers1AreReturned" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="cartArrayUnitTestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="cartArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cartArrayUnitTestTest.testValidateCartIsArray" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="cartArrayUnitTestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/cartArrayUnitTestTest.php" method="testValidateCartIsArray" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="userArrayUnitTestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -144,19 +128,19 @@
     </configuration>
     <list>
       <item itemvalue="PHPUnit.Local Unit Tests" />
-      <item itemvalue="PHPUnit.MockUsersTest.testMockUsersAreReturned" />
-      <item itemvalue="PHPUnit.MockUsersTest" />
       <item itemvalue="PHPUnit.userArrayUnitTestTest" />
       <item itemvalue="PHPUnit.userArrayUnitTestTest.testValidateUserKey" />
       <item itemvalue="PHPUnit.cartArrayUnitTestTest" />
+      <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartIsArray" />
+      <item itemvalue="PHPUnit.MockUsersTest.testMockUsers1AreReturned" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.cartArrayUnitTestTest" />
         <item itemvalue="PHPUnit.userArrayUnitTestTest.testValidateUserKey" />
+        <item itemvalue="PHPUnit.MockUsersTest.testMockUsers1AreReturned" />
+        <item itemvalue="PHPUnit.cartArrayUnitTestTest.testValidateCartIsArray" />
+        <item itemvalue="PHPUnit.cartArrayUnitTestTest" />
         <item itemvalue="PHPUnit.userArrayUnitTestTest" />
-        <item itemvalue="PHPUnit.MockUsersTest" />
-        <item itemvalue="PHPUnit.MockUsersTest.testMockUsersAreReturned" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +160,7 @@
       <workItem from="1633054536887" duration="1319000" />
       <workItem from="1633196228605" duration="1335000" />
       <workItem from="1633662705092" duration="1051000" />
-      <workItem from="1633937968529" duration="1495000" />
+      <workItem from="1633937968529" duration="1758000" />
     </task>
     <servers />
   </component>
@@ -203,15 +187,16 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest.xml" NAME="redirectUnitTestTest Coverage Results" MODIFIED="1632978325419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest.xml" NAME="UserTest Coverage Results" MODIFIED="1632979530406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testRedirectToHomepageOK.xml" NAME="redirectUnitTestTest.testRedirectToHomepageOK Coverage Results" MODIFIED="1632981616023" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest.xml" NAME="cartArrayUnitTestTest Coverage Results" MODIFIED="1632991464671" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest.xml" NAME="cartArrayUnitTestTest Coverage Results" MODIFIED="1633939685111" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testOnlineRedirectOK.xml" NAME="redirectUnitTestTest.testOnlineRedirectOK Coverage Results" MODIFIED="1632992125902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest.xml" NAME="userArrayUnitTestTest Coverage Results" MODIFIED="1632991456817" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest.xml" NAME="userArrayUnitTestTest Coverage Results" MODIFIED="1633939673180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest_testValidateCartIsArray.xml" NAME="cartArrayUnitTestTest.testValidateCartIsArray Coverage Results" MODIFIED="1633939711656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest_testUsersCanBeSet.xml" NAME="UserTest.testUsersCanBeSet Coverage Results" MODIFIED="1632979526660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testValidateUserSessionIsEmptyTrue.xml" NAME="redirectUnitTestTest.testValidateUserSessionIsEmptyTrue Coverage Results" MODIFIED="1632992088239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@Local_Unit_Tests.xml" NAME="Local Unit Tests Coverage Results" MODIFIED="1632924750345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserIsArray.xml" NAME="userArrayUnitTestTest.testValidateUserIsArray Coverage Results" MODIFIED="1632992393490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserKey.xml" NAME="userArrayUnitTestTest.testValidateUserKey Coverage Results" MODIFIED="1632992613475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers1AreReturned.xml" NAME="MockUsersTest.testMockUsers1AreReturned Coverage Results" MODIFIED="1632992435105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserKey.xml" NAME="userArrayUnitTestTest.testValidateUserKey Coverage Results" MODIFIED="1633939735604" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers1AreReturned.xml" NAME="MockUsersTest.testMockUsers1AreReturned Coverage Results" MODIFIED="1633939725849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testValidateInitSessionIsEmptyTrue.xml" NAME="redirectUnitTestTest.testValidateInitSessionIsEmptyTrue Coverage Results" MODIFIED="1632980362533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@loginClassTest_testLoginUser.xml" NAME="loginClassTest.testLoginUser Coverage Results" MODIFIED="1632979628159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
