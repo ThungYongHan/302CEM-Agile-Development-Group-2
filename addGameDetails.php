@@ -17,7 +17,7 @@ $game_year = $_POST["gameyear"];
         $use = $_SESSION['username'];
 
         if (!$problem) {
-            $game_covercontent = $game_covercontent;
+            $game_covercontent = $game_cover;
             $extension = substr($game_covercontent, strlen($game_covercontent)-4, strlen($game_covercontent));
             $allowed_extensions = array(".jpg", ".png", ".jpeg");
             $game_img = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
