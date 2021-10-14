@@ -100,7 +100,7 @@
                                     
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Game Cover Image</label>
-                                        <input class="form-control" type="file" id="formFile" name="gamecover" required/>
+                                        <input class="form-control" type="file" accept="image/*" id="formFile" name="gamecover" required/>
                                     </div>
 
                                     <label for="customRange" class="form-label">Year Published</label>
