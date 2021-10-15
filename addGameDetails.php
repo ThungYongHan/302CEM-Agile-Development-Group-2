@@ -23,6 +23,32 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL.";
     }
+
+    $sql1 = "SELECT game_id FROM games WHERE game_name = ?";
+
+    if ($statement = mysqli_prepare($conn, $sql1)){
+        mysqli_stmt_bind_param($statement, "s", $param_gamename);
+
+        $param_gamename = trim($game_name);
+
+        if (mysqli_stmt_execute($statement)){
+            mysqli_stmt_store_result($statement);
+
+            if (mysqli_stmt_num_rows($statement) == 1){
+                echo "<script type='text/javascript'>
+                    alert ('The game is already inserted.');
+                    window.location.href='GameBrowsingHomepage.php';
+                </script>";
+                            
+                $problem = true;
+
+            }else{
+                $game_name = trim($game_name);
+            }
+        } 
+        mysqli_stmt_close($statement);
+    }
+
     $game_img = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
     if ($_FILES["gamecover"]["size"] > 60000) {
         fileSizeAlert();
@@ -38,10 +64,7 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
                         '$game_publisher', '$game_datetime' , '$game_year', '$game_img')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<script type='text/javascript'>
-                        alert ('Game added successfully!');
-                        </script>";
-            header("Location: GameBrowsingHomepage.php");
+            AddSuccessAlert();
             exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
@@ -55,6 +78,17 @@ function fileSizeAlert()
     "
     <script>
         window.alert('Uploaded game cover image file size is over the 60kb limit.');
+        window.location.href='GameBrowsingHomepage.php';
+    </script>
+    ";
+}
+
+function AddSuccessAlert()
+{
+    echo
+    "
+    <script>
+        window.alert('Game added successfully.');
         window.location.href='GameBrowsingHomepage.php';
     </script>
     ";
