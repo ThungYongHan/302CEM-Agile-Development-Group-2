@@ -1,6 +1,6 @@
 <?php
-  error_reporting(0);
-  session_start();
+error_reporting(0);
+session_start();
 
 $conn = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
 if (mysqli_connect_errno()) {
@@ -23,6 +23,31 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL.";
     }
+
+    $sql1 = "SELECT game_id FROM games WHERE game_name = ?";
+
+    if ($statement = mysqli_prepare($conn, $sql1)){
+        mysqli_stmt_bind_param($statement, "s", $param_gamename);
+
+        $param_gamename = trim($game_name);
+
+        if (mysqli_stmt_execute($statement)){
+            mysqli_stmt_store_result($statement);
+
+            if (mysqli_stmt_num_rows($statement) == 1){
+                echo "<script type='text/javascript'>
+                    alert ('The game is already inserted.');
+                </script>";
+
+                $problem = true;
+
+            }else{
+                $game_name = trim($game_name);
+            }
+        }
+        mysqli_stmt_close($statement);
+    }
+
     $game_img = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
     if ($_FILES["gamecover"]["size"] > 60000) {
         fileSizeAlert();
@@ -48,7 +73,7 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
         }
     }
 }
-          
+
 function fileSizeAlert()
 {
     echo
