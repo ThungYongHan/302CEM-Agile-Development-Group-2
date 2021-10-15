@@ -37,6 +37,7 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
             if (mysqli_stmt_num_rows($statement) == 1){
                 echo "<script type='text/javascript'>
                     alert ('The game is already inserted.');
+                    window.location.href='GameBrowsingHomepage.php';
                 </script>";
 
                 $problem = true;
@@ -63,10 +64,7 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $user)
                         '$game_publisher', '$game_datetime' , '$game_year', '$game_img')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<script type='text/javascript'>
-                        alert ('Game added successfully!');
-                        </script>";
-            header("Location: GameBrowsingHomepage.php");
+            AddSuccessAlert();
             exit();
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
@@ -80,6 +78,17 @@ function fileSizeAlert()
     "
     <script>
         window.alert('Uploaded game cover image file size is over the 60kb limit.');
+        window.location.href='GameBrowsingHomepage.php';
+    </script>
+    ";
+}
+
+function AddSuccessAlert()
+{
+    echo
+    "
+    <script>
+        window.alert('Game added successfully.');
         window.location.href='GameBrowsingHomepage.php';
     </script>
     ";
