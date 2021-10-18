@@ -12,88 +12,99 @@ class ComposerStaticInit7052f41130593029ae170f1a5e4f26f8
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
+        '5f0e95b8df5acf4a92c896dc3ac4bb6e' => __DIR__ . '/..' . '/phpmetrics/phpmetrics/src/functions.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        'p' =>
-            array (
-                'phpDocumentor\\Reflection\\' => 25,
-            ),
-        'W' =>
-            array (
-                'Webmozart\\Assert\\' => 17,
-            ),
-        'S' =>
-            array (
-                'Symfony\\Polyfill\\Php80\\' => 23,
-                'Symfony\\Polyfill\\Mbstring\\' => 26,
-                'Symfony\\Polyfill\\Ctype\\' => 23,
-                'Symfony\\Component\\VarDumper\\' => 28,
-            ),
-        'P' =>
-            array (
-                'Prophecy\\' => 9,
-                'PhpParser\\' => 10,
-            ),
-        'D' =>
-            array (
-                'Doctrine\\Instantiator\\' => 22,
-                'DeepCopy\\' => 9,
-            ),
-        'A' =>
-            array (
-                'App\\' => 4,
-            ),
+        'p' => 
+        array (
+            'phpDocumentor\\Reflection\\' => 25,
+        ),
+        'W' => 
+        array (
+            'Webmozart\\Assert\\' => 17,
+        ),
+        'S' => 
+        array (
+            'Symfony\\Polyfill\\Php80\\' => 23,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Ctype\\' => 23,
+            'Symfony\\Component\\VarDumper\\' => 28,
+        ),
+        'P' => 
+        array (
+            'Prophecy\\' => 9,
+            'PhpParser\\' => 10,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Instantiator\\' => 22,
+            'DeepCopy\\' => 9,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'phpDocumentor\\Reflection\\' =>
+        'phpDocumentor\\Reflection\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'Webmozart\\Assert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'Symfony\\Polyfill\\Php80\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
+        ),
+        'Symfony\\Polyfill\\Mbstring\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Ctype\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Prophecy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
+        ),
+        'PhpParser\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
+        ),
+        'Doctrine\\Instantiator\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
+        ),
+        'DeepCopy\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
+    );
+
+    public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'Hal\\' => 
             array (
-                0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-                1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-                2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+                0 => __DIR__ . '/..' . '/phpmetrics/phpmetrics/src',
             ),
-        'Webmozart\\Assert\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/webmozart/assert/src',
-            ),
-        'Symfony\\Polyfill\\Php80\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/symfony/polyfill-php80',
-            ),
-        'Symfony\\Polyfill\\Mbstring\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
-            ),
-        'Symfony\\Polyfill\\Ctype\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
-            ),
-        'Symfony\\Component\\VarDumper\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/symfony/var-dumper',
-            ),
-        'Prophecy\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/phpspec/prophecy/src/Prophecy',
-            ),
-        'PhpParser\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
-            ),
-        'Doctrine\\Instantiator\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/instantiator/src/Doctrine/Instantiator',
-            ),
-        'DeepCopy\\' =>
-            array (
-                0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
-            ),
-        'App\\' =>
-            array (
-                0 => __DIR__ . '/../..' . '/src',
-            ),
+        ),
     );
 
     public static $classMap = array (
@@ -734,6 +745,7 @@ class ComposerStaticInit7052f41130593029ae170f1a5e4f26f8
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit7052f41130593029ae170f1a5e4f26f8::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit7052f41130593029ae170f1a5e4f26f8::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit7052f41130593029ae170f1a5e4f26f8::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit7052f41130593029ae170f1a5e4f26f8::$classMap;
 
         }, null, ClassLoader::class);

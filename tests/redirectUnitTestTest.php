@@ -27,5 +27,4 @@ class redirectUnitTestTest extends TestCase{
         $result = $this->object->validateUserSessionIsEmptyTrue();
         $this->assertEmpty($result);
     }
-
 }
