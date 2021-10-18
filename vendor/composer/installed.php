@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8c87b0382f06329117f19ce0d3e2d38ad6843e89',
+        'reference' => '491561dcaf5ff402f3d7ab61be4d436334e8978c',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8c87b0382f06329117f19ce0d3e2d38ad6843e89',
+            'reference' => '491561dcaf5ff402f3d7ab61be4d436334e8978c',
             'dev_requirement' => false,
         ),
         'doctrine/instantiator' => array(
@@ -321,6 +321,15 @@
             'aliases' => array(),
             'reference' => 'c6c1022351a901512170118436c764e473f6de8c',
             'dev_requirement' => false,
+        ),
+        'squizlabs/php_codesniffer' => array(
+            'pretty_version' => '3.6.1',
+            'version' => '3.6.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../squizlabs/php_codesniffer',
+            'aliases' => array(),
+            'reference' => 'f268ca40d54617c6e06757f83f699775c9b3ff2e',
+            'dev_requirement' => true,
         ),
         'symfony/polyfill-ctype' => array(
             'pretty_version' => 'v1.23.0',
