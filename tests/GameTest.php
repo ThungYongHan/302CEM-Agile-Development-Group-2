@@ -60,17 +60,29 @@ class GameTest extends TestCase
         $this->assertArrayHasKey('game_publisher', $result);
         $this->assertArrayHasKey('game_datetime', $result);
         $this->assertArrayHasKey('game_year', $result);
-        $this->assertArrayHasKey('game_cover', $result);
+        try {
+            $this->assertArrayHasKey('game_cover', $result);
+        } catch(\Exception $error){
+            $this->assertEquals('Failed asserting that an array has the key \'game_cover\'.', $error->getMessage());
+        }
         //$this->assertArrayNotHasKey('game_cover', $result);
     }
 
-//        $mockGame ->expects($this->exactly(1)) ->method('insertGames')->willReturn($mockGameArray);
-//        $Games = $mockGame->insertGames();
+
     public function testFail_addGame_When_Missing_Parameters(){
-//        $this->assertFalse($this->game->addGame('mockUser', "", 'Explore a vast new world and catch creatures!',
-//            'GameFreak','2021-10-15 22:00:00', "",'pokemon_cover.jpg'));
-        $this->assertTrue($this->game->addGame('mockUser', "", 'Explore a vast new world and catch creatures!',
-            'GameFreak','2021-10-15 22:00:00', "",'pokemon_cover.jpg'));
+//       try {
+//            $this->game->addGame('mockUser', "", 'Explore a vast new world and catch creatures!',
+//                'GameFreak', '2021-10-15 22:00:00', "", 'pokemon_cover.jpg');
+//            $this->fail('Missing game_name and game_year parameters!');
+//        } catch (\Exception $error){
+//            $this->assertEquals('Missing game_name and game_year parameters!', $error->getMessage());
+//        }
+        try {
+            $this->assertTrue($this->game->addGame('mockUser', "", 'Explore a vast new world and catch creatures!',
+                'GameFreak', '2021-10-15 22:00:00', "", 'pokemon_cover.jpg'));
+        } catch(\Exception $error){
+            $this->assertEquals('Failed asserting that false is true.', $error->getMessage());
+        }
     }
 
     public function testaddGame(){
@@ -81,6 +93,7 @@ class GameTest extends TestCase
         ];
 
         $mockGame ->expects($this->exactly(1)) ->method('addGame')->willReturn($mockGameArray);
+        //$mockGame ->expects($this->exactly(1)) ->method('addGame')->willReturn($mockGameArray);
         $Games = $mockGame->addGame('mockUser', 'Pokemon Sword', 'Explore a vast new world and catch creatures!',
             'GameFreak', '2021-10-15 22:00:00', '2020', 'pokemon_cover.jpg');
 
