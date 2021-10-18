@@ -8,15 +8,15 @@ if (mysqli_connect_errno()) {
 }
 
 $problem = false;
+date_default_timezone_set("Asia/Kuala_Lumpur");
 
+$user = $_SESSION['username'];
 $game_name = mysqli_real_escape_string($conn, $_POST["gamename"]);
 $game_desc = mysqli_real_escape_string($conn, $_POST["gamedescription"]);
 $game_publisher = mysqli_real_escape_string($conn, $_POST["gamepublisher"]);
+$game_datetime = date('Y-m-d H:i:s');
 $game_year = $_POST["gameyear"];
 $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
-$user = $_SESSION['username'];
-date_default_timezone_set("Asia/Kuala_Lumpur");
-$game_datetime = date('Y-m-d H:i:s');
 
 addGame($user, $game_name, $game_desc, $game_publisher, $game_datetime, $game_year, $game_cover);
 

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/GameTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/GameTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/VarCloner.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/symfony/var-dumper/Cloner/VarCloner.php" afterDir="false" />
-    </list>
+    <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -177,7 +172,7 @@
       <workItem from="1634492246379" duration="4661000" />
       <workItem from="1634544331913" duration="5367000" />
       <workItem from="1634559714831" duration="696000" />
-      <workItem from="1634560418819" duration="5078000" />
+      <workItem from="1634560418819" duration="5468000" />
     </task>
     <servers />
   </component>
@@ -226,7 +221,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest.xml" NAME="MockGamesTest Coverage Results" MODIFIED="1634477247704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testspare.xml" NAME="GameTest.testspare Coverage Results" MODIFIED="1634483626461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidateGameHasAllKeys.xml" NAME="GameTest.testValidateGameHasAllKeys Coverage Results" MODIFIED="1634496063537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest.xml" NAME="GameTest Coverage Results" MODIFIED="1634566231290" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest.xml" NAME="GameTest Coverage Results" MODIFIED="1634567571371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers3AreReturned.xml" NAME="MockUsersTest.testMockUsers3AreReturned Coverage Results" MODIFIED="1634273105262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest.xml" NAME="UserTest Coverage Results" MODIFIED="1632979530406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testGetGameName.xml" NAME="GameTest.testGetGameName Coverage Results" MODIFIED="1634478205342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
