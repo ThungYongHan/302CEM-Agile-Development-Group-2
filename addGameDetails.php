@@ -15,10 +15,12 @@ $game_publisher = mysqli_real_escape_string($conn, $_POST["gamepublisher"]);
 $game_year = $_POST["gameyear"];
 $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
 $user = $_SESSION['username'];
+date_default_timezone_set("Asia/Kuala_Lumpur");
+$game_datetime = date('Y-m-d H:i:s');
 
-addGame($game_name, $game_desc, $game_publisher, $game_year, $game_cover, $user);
+addGame($user, $game_name, $game_desc, $game_publisher, $game_datetime, $game_year, $game_cover);
 
-function addGame($game_name, $game_desc, $game_publisher, $game_year, $game_cover, $user)
+function addGame($user, $game_name, $game_desc, $game_publisher, $game_datetime, $game_year, $game_cover)
 {
     $conn = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
     if (mysqli_connect_errno()) {
@@ -49,7 +51,6 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $game_cove
         mysqli_stmt_close($statement);
     }
 
-//    $game_img = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
     if ($_FILES["gamecover"]["size"] > 60000) {
         fileSizeAlert();
         $problem = true;
@@ -57,8 +58,6 @@ function addGame($game_name, $game_desc, $game_publisher, $game_year, $game_cove
         $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
     }
     if (!$problem) {
-        date_default_timezone_set("Asia/Kuala_Lumpur");
-        $game_datetime = date('Y-m-d H:i:s');
         $sql = "INSERT INTO games (user_id, game_name, game_desc, game_publisher, game_datetime, game_year, game_cover)
                         VALUES ((SELECT user_id FROM users WHERE username= '$user'), '$game_name', '$game_desc', 
                         '$game_publisher', '$game_datetime' , '$game_year', '$game_cover')";
