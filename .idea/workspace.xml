@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/MockGamesTest.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +77,7 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phpmetrics/phpmetrics" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1yZFiSA1Khvd6fpxXday7xbISSL" />
@@ -92,7 +90,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../302CEM-Agile-Development-Group-2-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -108,17 +106,13 @@
       <recent name="C:\xampp\htdocs\302CEM-Agile-Development-Group-2\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GameTest">
+  <component name="RunManager" selected="PHPUnit.MockUsersTest.testMockUsers2AreReturned">
     <configuration name="GameTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="GameTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/GameTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="GameTest.testFail_Validate_Game_Missing_GameCover_Key" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="GameTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/GameTest.php" method="testFail_Validate_Game_Missing_GameCover_Key" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="GameTest.testFail_addGame_When_Missing_Parameters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="GameTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/GameTest.php" method="testFail_addGame_When_Missing_Parameters" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="GameTest.testValidate_Game_Has_All_Keys" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -138,21 +132,25 @@
       <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" scope="XML" use_alternative_configuration_file="true" />
       <method v="2" />
     </configuration>
+    <configuration name="MockUsersTest.testMockUsers2AreReturned" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="MockUsersTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/MockUsersTest.php" method="testMockUsers2AreReturned" scope="Method" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="PHPUnit.Local Unit Tests" />
       <item itemvalue="PHPUnit.GameTest" />
-      <item itemvalue="PHPUnit.GameTest.testFail_addGame_When_Missing_Parameters" />
       <item itemvalue="PHPUnit.GameTest.testFail_Validate_Game_Missing_GameCover_Key" />
       <item itemvalue="PHPUnit.GameTest.testValidate_Game_Is_Array" />
       <item itemvalue="PHPUnit.GameTest.testValidate_Game_Has_All_Keys" />
+      <item itemvalue="PHPUnit.MockUsersTest.testMockUsers2AreReturned" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.MockUsersTest.testMockUsers2AreReturned" />
         <item itemvalue="PHPUnit.GameTest" />
         <item itemvalue="PHPUnit.GameTest.testValidate_Game_Has_All_Keys" />
         <item itemvalue="PHPUnit.GameTest.testValidate_Game_Is_Array" />
         <item itemvalue="PHPUnit.GameTest.testFail_Validate_Game_Missing_GameCover_Key" />
-        <item itemvalue="PHPUnit.GameTest.testFail_addGame_When_Missing_Parameters" />
       </list>
     </recent_temporary>
   </component>
@@ -186,7 +184,8 @@
       <workItem from="1634559714831" duration="696000" />
       <workItem from="1634560418819" duration="5911000" />
       <workItem from="1634568580397" duration="1202000" />
-      <workItem from="1634802804164" duration="331000" />
+      <workItem from="1634802804164" duration="1956000" />
+      <workItem from="1634805634432" duration="452000" />
     </task>
     <servers />
   </component>
@@ -214,9 +213,9 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testaddGame.xml" NAME="GameTest.testaddGame Coverage Results" MODIFIED="1634566361985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testOnlineRedirectOK.xml" NAME="redirectUnitTestTest.testOnlineRedirectOK Coverage Results" MODIFIED="1632992125902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest_testCheckMockGameIsInsertedAndHasCorrectDetails.xml" NAME="MockGamesTest.testCheckMockGameIsInsertedAndHasCorrectDetails Coverage Results" MODIFIED="1634483183810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../xampp/htdocs/302CEM-Agile-Development-Group-2/phpunit.xml" NAME="phpunit.xml" MODIFIED="1633935784204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest.xml" NAME="userArrayUnitTestTest Coverage Results" MODIFIED="1633939673180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testAddGame.xml" NAME="GameTest.testAddGame Coverage Results" MODIFIED="1634495058626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers2AreReturned.xml" NAME="MockUsersTest.testMockUsers2AreReturned Coverage Results" MODIFIED="1634805642590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testAddGameMissingParameters.xml" NAME="GameTest.testAddGameMissingParameters Coverage Results" MODIFIED="1634494908677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest_testMockGameIsInserted.xml" NAME="MockGamesTest.testMockGameIsInserted Coverage Results" MODIFIED="1634280379288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testGetGameName.xml" NAME="GameTest.testGetGameName Coverage Results" MODIFIED="1634478205342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -258,6 +257,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserKey.xml" NAME="userArrayUnitTestTest.testValidateUserKey Coverage Results" MODIFIED="1634042520779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers1AreReturned.xml" NAME="MockUsersTest.testMockUsers1AreReturned Coverage Results" MODIFIED="1634273235434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testValidateInitSessionIsEmptyTrue.xml" NAME="redirectUnitTestTest.testValidateInitSessionIsEmptyTrue Coverage Results" MODIFIED="1632980362533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../xampp/htdocs/302CEM-Agile-Development-Group-2/phpunit.xml" NAME="phpunit.xml" MODIFIED="1633935784204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest_testValidateCartKey.xml" NAME="cartArrayUnitTestTest.testValidateCartKey Coverage Results" MODIFIED="1634044259852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidate_Game_Is_Array.xml" NAME="GameTest.testValidate_Game_Is_Array Coverage Results" MODIFIED="1634803015483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
