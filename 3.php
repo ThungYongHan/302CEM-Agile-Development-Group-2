@@ -1,6 +1,14 @@
 <?php
 $title = 'Fast and Furious Crossword';
-include ("header.php");
+error_reporting(0);
+session_start();
+$title = "Game Browsing Homepage";
+$user = $_SESSION['username'];
+if (empty($user)) {
+    include('header.php');
+} else {
+    include('loggedinheader.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,6 +92,21 @@ include ("header.php");
 
     .review-list {
       padding-left: 25px;
+    }
+
+    .article-bg{
+        background-color: #5979f8;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .divider{
+        border-bottom-width: 2px;
+        border-bottom-style: dotted;
+    }
+
+    .reviews{
+        padding-top:0.5em;
     }
   </style>
 </head>
@@ -170,28 +193,21 @@ LEFT JOIN users ON reviews.user_id = users.user_id
 WHERE game_id=3";
 if($result = mysqli_query($link, $sql)){
     if(mysqli_num_rows($result) > 0){
-     
-        echo '<table class="table text-light">'; 
-        echo '<thead>';
-            echo "<tr>";
-            echo "<th>Username</th>";
-            echo "<th>Review</th>";
-            echo "<th>Ratings</th>";
-            echo "<th>Date posted</th>";
-            echo "</tr>";
-            echo '</thead>';
+
         while($row = mysqli_fetch_array($result)){
-          echo '<tbody>';
-            echo "<tr>";
-            
-                echo "<td>" . $row['username'] . "</td>";
-                echo "<td>" . $row['user_review'] . "</td>";
-                echo "<td>" . $row['review_num'] . "</td>";
-                echo "<td>" . date('d/m/Y', strtotime($row['review_datetime'])) . "</td>";
-            echo "</tr>";
-            echo '</tbody>';
+            print '<div class="container-fluid">
+                <div class="row g-1">
+                
+                <p class="text-light fw-bold fs-4">'.$row['username'].' <span class="fs-6"> on</span> <span class="fs-6" style="color:#5979f8"> '.date('d-m-Y',strtotime($row['review_datetime'])).'</span></p>';
+
+            print '<div class="article-bg mx-auto p-3"> <span class="fs-6 badge bg-dark">';
+            print $row['review_num']. ' <i style="color:#c9d3fc;" class="fa fa-star"></i></span><div class="divider p-1"></div>';
+
+            print '<div class="reviews"><p class="fs-5">'.$row['user_review']."</div>";
+
+            print '</div></div></div><br>';
         }
-        echo "</table>";
+
         // Free result set
         mysqli_free_result($result);
     } else{
@@ -205,7 +221,7 @@ if($result = mysqli_query($link, $sql)){
 mysqli_close($link);
 ?>
       </div>
-      <fieldset disabled>
+      <fieldset >
         <div class="review-container">
           <h4>Rate and write a review about the game</h4>
           <div class="rating-slider">
