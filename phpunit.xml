@@ -17,7 +17,6 @@
     </logging>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-<!--            <directory suffix=".php">/path/to/files</directory>-->
             <directory suffix=".php">/xampp/htdocs/302CEM-Agile-Development-Group-2/tests</directory>
 
             <file>/path/to/file</file>
