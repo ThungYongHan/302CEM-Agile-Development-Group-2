@@ -1,10 +1,8 @@
 <?php
 
-namespace TDD\AddGameReview\Testing;
-
 use mysql_xdevapi\Exception;
 use PHPUnit\Framework\TestCase;
-use TDD\AddGameReview\GameRepo;
+use App\GameRepo;
 
 class GameNameValidationTest extends TestCase
 {

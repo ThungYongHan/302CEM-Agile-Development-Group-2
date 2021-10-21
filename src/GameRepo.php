@@ -1,6 +1,6 @@
 <?php
 
-namespace TDD\AddGameReview;
+namespace App;
 
 class GameRepo
 {
