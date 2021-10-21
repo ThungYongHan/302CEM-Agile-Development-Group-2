@@ -2,7 +2,7 @@
 
 namespace TDD\AddGameReview;
 
-class GameRepository
+class GameRepo
 {
     protected $pdo;
 

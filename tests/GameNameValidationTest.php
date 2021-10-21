@@ -4,13 +4,13 @@ namespace TDD\AddGameReview\Testing;
 
 use mysql_xdevapi\Exception;
 use PHPUnit\Framework\TestCase;
-use TDD\AddGameReview\GameRepository;
+use TDD\AddGameReview\GameRepo;
 
 class GameNameValidationTest extends TestCase
 {
     public function testGameNameValidation()
     {
-        $mockRepo = $this->createMock(GameRepository::class);
+        $mockRepo = $this->createMock(GameRepo::class);
 
         $mockGamesArray = [
             ['game_id' => 1, 'user_id' => '1', 'game_name' => 'Candy Crush', 'game_description' => 'Sweet game!', 'game_publisher' => 'King', 'game_datetime' => '2021-10-12 22:00:00', 'game_year' => '2020', 'game_cover' => 'BLOB']
