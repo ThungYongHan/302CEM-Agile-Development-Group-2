@@ -16,7 +16,10 @@ namespace phpDocumentor\Reflection;
 use ArrayIterator;
 use InvalidArgumentException;
 use phpDocumentor\Reflection\Types\Array_;
+<<<<<<< Updated upstream
 use phpDocumentor\Reflection\Types\ArrayKey;
+=======
+>>>>>>> Stashed changes
 use phpDocumentor\Reflection\Types\ClassString;
 use phpDocumentor\Reflection\Types\Collection;
 use phpDocumentor\Reflection\Types\Compound;
@@ -103,7 +106,10 @@ final class TypeResolver
         'callable-string' => PseudoTypes\CallableString::class,
         'false' => PseudoTypes\False_::class,
         'true' => PseudoTypes\True_::class,
+<<<<<<< Updated upstream
         'literal-string' => PseudoTypes\LiteralString::class,
+=======
+>>>>>>> Stashed changes
         'self' => Types\Self_::class,
         '$this' => Types\This::class,
         'static' => Types\Static_::class,
@@ -545,7 +551,10 @@ final class TypeResolver
                 // check the key type for an "array" collection. We allow only
                 // strings or integers.
                 if (
+<<<<<<< Updated upstream
                     !$keyType instanceof ArrayKey &&
+=======
+>>>>>>> Stashed changes
                     !$keyType instanceof String_ &&
                     !$keyType instanceof Integer &&
                     !$keyType instanceof Compound
@@ -558,7 +567,10 @@ final class TypeResolver
                 if ($keyType instanceof Compound) {
                     foreach ($keyType->getIterator() as $item) {
                         if (
+<<<<<<< Updated upstream
                             !$item instanceof ArrayKey &&
+=======
+>>>>>>> Stashed changes
                             !$item instanceof String_ &&
                             !$item instanceof Integer
                         ) {

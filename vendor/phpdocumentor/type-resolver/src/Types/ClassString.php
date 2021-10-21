@@ -14,7 +14,10 @@ declare(strict_types=1);
 namespace phpDocumentor\Reflection\Types;
 
 use phpDocumentor\Reflection\Fqsen;
+<<<<<<< Updated upstream
 use phpDocumentor\Reflection\PseudoType;
+=======
+>>>>>>> Stashed changes
 use phpDocumentor\Reflection\Type;
 
 /**
@@ -22,7 +25,11 @@ use phpDocumentor\Reflection\Type;
  *
  * @psalm-immutable
  */
+<<<<<<< Updated upstream
 final class ClassString extends String_ implements PseudoType
+=======
+final class ClassString implements Type
+>>>>>>> Stashed changes
 {
     /** @var Fqsen|null */
     private $fqsen;
@@ -35,11 +42,14 @@ final class ClassString extends String_ implements PseudoType
         $this->fqsen = $fqsen;
     }
 
+<<<<<<< Updated upstream
     public function underlyingType(): Type
     {
         return new String_();
     }
 
+=======
+>>>>>>> Stashed changes
     /**
      * Returns the FQSEN associated with this object.
      */

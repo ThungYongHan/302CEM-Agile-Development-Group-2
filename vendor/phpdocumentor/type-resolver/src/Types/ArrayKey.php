@@ -13,9 +13,12 @@ declare(strict_types=1);
 
 namespace phpDocumentor\Reflection\Types;
 
+<<<<<<< Updated upstream
 use phpDocumentor\Reflection\PseudoType;
 use phpDocumentor\Reflection\Type;
 
+=======
+>>>>>>> Stashed changes
 /**
  * Value Object representing a array-key Type.
  *
@@ -23,18 +26,25 @@ use phpDocumentor\Reflection\Type;
  *
  * @psalm-immutable
  */
+<<<<<<< Updated upstream
 final class ArrayKey extends AggregatedType implements PseudoType
+=======
+final class ArrayKey extends AggregatedType
+>>>>>>> Stashed changes
 {
     public function __construct()
     {
         parent::__construct([new String_(), new Integer()], '|');
     }
 
+<<<<<<< Updated upstream
     public function underlyingType(): Type
     {
         return new Compound([new String_(), new Integer()]);
     }
 
+=======
+>>>>>>> Stashed changes
     public function __toString(): string
     {
         return 'array-key';
