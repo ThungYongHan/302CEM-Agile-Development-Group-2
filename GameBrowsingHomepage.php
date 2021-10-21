@@ -1,14 +1,14 @@
 <?php
-  error_reporting(0);
-  session_start();
-   $title = "Game Browsing Homepage";
-  $user = $_SESSION['username'];
-  if (empty($user)) {
-      include('header.php');
-  } else {
-      include('loggedinheader.php');
-  }
-?> 
+error_reporting(0);
+session_start();
+$title = "Game Browsing Homepage";
+$user = $_SESSION['username'];
+if (empty($user)) {
+    include('header.php');
+} else {
+    include('loggedinheader.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,37 +45,36 @@
 </head>
 
 <body>
-    <section id ="jumbotron-section">
-      <div class="row">
+<section id ="jumbotron-section">
+    <div class="row">
         <div id="jumbo-image" class="container py-5 text-center text-dark" style="background-image: linear-gradient(to bottom,rgba(171, 196, 222, 0.55)50% ,rgba(255, 255, 255, 0.75) 75%),url(images/GI.jpg)">
-        <h1 class="display-5">Welcome to the Game Review Website</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-        <p class="lead">
-          <a class="btn btn-outline-dark btn-lg" href="#" role="button">Learn more</a>
-        </p>
-      </div>
-      </div>
-    </section>
+            <h1 class="display-5">Welcome to the Game Review Website</h1>
+            <p class="lead">We review games for gamers of all sorts.</p>
+            <p class="lead">
+                <a class="btn btn-outline-dark btn-lg" href="#" role="button">Start browsing<span>🎮</span></a>
+            </p>
+        </div>
+    </div>
+</section>
 
-    <section id="review">
-        <div class="row">
-            <div class="col-12">
-                <div class="container py-5">
+<section id="review">
+    <div class="row">
+        <div class="col-12">
+            <div class="container py-5">
                 <h3>Games On The Shelf</h3>
-                    <?php
-                    if (!empty($user)) {
-                        ?>
+                <?php
+                if (!empty($user)) {
+                    ?>
                     <button type="button" button class="btn btn-secondary ms-3 mb-3" data-bs-toggle="modal" data-bs-target="#addGameModal">Add Game</button>
                     <?php
-                    }
-                    ?>
+                }
+                ?>
                 <hr class="me-auto">
-            <div class="row">
-                <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                                    <form method="POST" class="testform" action="addGameDetails.php" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="modal fade" id="addGameModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form method="POST" class="testform" action="addGameDetails.php" enctype="multipart/form-data">
                                     <h2 style="color:black;">Add Game</h2>
                                     <div class="mb-3">
                                         <label for="GameName" class="form-label">Game Name</label>
@@ -97,7 +96,7 @@
                                         <label for="publisher" class="form-label">Game Publisher</label>
                                         <input type="text" class="form-control" id="gamepublisher" name="gamepublisher" aria-describedby="gameHelp" required/>
                                     </div>
-                                    
+
                                     <div class="mb-3">
                                         <label for="formFile" class="form-label">Game Cover Image</label>
                                         <input class="form-control" type="file" accept="image/*" id="formFile" name="gamecover" required/>
@@ -107,24 +106,26 @@
                                     <input type="range" class="form-range" min="1980" max="2021" id="customRange" name="gameyear" required/>
                                     <p>Year: <span id="demo"></span></p><br>
                                     <script>
-                                    var slider = document.getElementById("customRange");
-                                    var output = document.getElementById("demo");
-                                    output.innerHTML = slider.value;
-                                    slider.oninput = function() {
-                                    output.innerHTML = this.value;
-                                    }
+                                        var slider = document.getElementById("customRange");
+                                        var output = document.getElementById("demo");
+                                        output.innerHTML = slider.value;
+                                        slider.oninput = function() {
+                                            output.innerHTML = this.value;
+                                        }
                                     </script>
                                     <button type="submit" name="add_game" class="btn btn-primary">Submit</button>
                                 </form>
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php
- $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
-  $query = "SELECT * FROM games ORDER BY game_id ASC";
-  $result = mysqli_query($connect, $query);
-  while ($row = mysqli_fetch_array($result)) {
-      print'
+                    <?php
+                    $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
+                    $query = "SELECT * FROM games ORDER BY game_id ASC";
+                    $result = mysqli_query($connect, $query);
+
+                    $row['game_id'] = $_GET['game_id'];
+                    while ($row = mysqli_fetch_array($result)) {
+                        print'
   <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
   <div class="card-style-1 mb-30">
     <div class="card-meta">
@@ -138,20 +139,20 @@
       <p>'.$row['game_desc'].'</p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <button type="button" class="btn btn-primary" onclick="document.location=\''.$row['game_id'].'.php\'">View</button>
+          <button type="button" class="btn btn-primary" onclick="document.location=\'GameDetailsReviews.php?game_id='.$row['game_id'].'\'">View</button>
         </div>
       </div>
     </div>
   </div>
 </div>
    ';
-  }
-    ?>
-              </div>
+                    }
+                    ?>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
