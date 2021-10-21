@@ -113,7 +113,7 @@ if (empty($user)) {
 
 <body>
 <section class="game-detail-container">
-    <img src="Furious_cover.jpg" style="width:450px;height:700px;">
+    <img src="images/Furious_cover.jpg" style="width:450px;height:700px;">
     <!-- <div class="GameTitleYear"> -->
       <?php 
       $link = mysqli_connect("localhost", "root", "", "gamereviewwebsite");
