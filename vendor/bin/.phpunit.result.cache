@@ -1,0 +1,1 @@
+{"version":1,"defects":{"ExampleAssertionsTest::testThatStringsWatch":3,"ExampleAssertionsTest::testThatNumbersAddUp":3,"MockUsersTest::testMockUsersAreReturned":4},"times":{"ExampleAssertionsTest::testThatStringsWatch":0.005,"ExampleAssertionsTest::testThatNumbersAddUp":0,"MockUsersTest::testMockUsersAreReturned":0.006}}
