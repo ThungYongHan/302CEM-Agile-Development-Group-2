@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,7 +78,6 @@
       <path value="$PROJECT_DIR$/vendor/phar-io/version" />
       <path value="$PROJECT_DIR$/vendor/phpmetrics/phpmetrics" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
-      <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1yZFiSA1Khvd6fpxXday7xbISSL" />
@@ -106,7 +106,7 @@
       <recent name="C:\xampp\htdocs\302CEM-Agile-Development-Group-2\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.MockUsersTest.testMockUsers2AreReturned">
+  <component name="RunManager" selected="PHPUnit.GameTest">
     <configuration name="GameTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="GameTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/GameTest.php" scope="Class" />
       <method v="2" />
@@ -140,14 +140,14 @@
       <item itemvalue="PHPUnit.Local Unit Tests" />
       <item itemvalue="PHPUnit.GameTest" />
       <item itemvalue="PHPUnit.GameTest.testFail_Validate_Game_Missing_GameCover_Key" />
-      <item itemvalue="PHPUnit.GameTest.testValidate_Game_Is_Array" />
       <item itemvalue="PHPUnit.GameTest.testValidate_Game_Has_All_Keys" />
+      <item itemvalue="PHPUnit.GameTest.testValidate_Game_Is_Array" />
       <item itemvalue="PHPUnit.MockUsersTest.testMockUsers2AreReturned" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.MockUsersTest.testMockUsers2AreReturned" />
         <item itemvalue="PHPUnit.GameTest" />
+        <item itemvalue="PHPUnit.MockUsersTest.testMockUsers2AreReturned" />
         <item itemvalue="PHPUnit.GameTest.testValidate_Game_Has_All_Keys" />
         <item itemvalue="PHPUnit.GameTest.testValidate_Game_Is_Array" />
         <item itemvalue="PHPUnit.GameTest.testFail_Validate_Game_Missing_GameCover_Key" />
@@ -186,6 +186,8 @@
       <workItem from="1634568580397" duration="1202000" />
       <workItem from="1634802804164" duration="1956000" />
       <workItem from="1634805634432" duration="452000" />
+      <workItem from="1634811994172" duration="678000" />
+      <workItem from="1634872056404" duration="1680000" />
     </task>
     <servers />
   </component>
@@ -213,6 +215,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testaddGame.xml" NAME="GameTest.testaddGame Coverage Results" MODIFIED="1634566361985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testOnlineRedirectOK.xml" NAME="redirectUnitTestTest.testOnlineRedirectOK Coverage Results" MODIFIED="1632992125902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest_testCheckMockGameIsInsertedAndHasCorrectDetails.xml" NAME="MockGamesTest.testCheckMockGameIsInsertedAndHasCorrectDetails Coverage Results" MODIFIED="1634483183810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../xampp/htdocs/302CEM-Agile-Development-Group-2/phpunit.xml" NAME="phpunit.xml" MODIFIED="1633935784204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest.xml" NAME="userArrayUnitTestTest Coverage Results" MODIFIED="1633939673180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testAddGame.xml" NAME="GameTest.testAddGame Coverage Results" MODIFIED="1634495058626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers2AreReturned.xml" NAME="MockUsersTest.testMockUsers2AreReturned Coverage Results" MODIFIED="1634805642590" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -248,7 +251,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest.xml" NAME="MockGamesTest Coverage Results" MODIFIED="1634477247704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testspare.xml" NAME="GameTest.testspare Coverage Results" MODIFIED="1634483626461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidateGameHasAllKeys.xml" NAME="GameTest.testValidateGameHasAllKeys Coverage Results" MODIFIED="1634496063537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest.xml" NAME="GameTest Coverage Results" MODIFIED="1634569783730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest.xml" NAME="GameTest Coverage Results" MODIFIED="1634872256318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers3AreReturned.xml" NAME="MockUsersTest.testMockUsers3AreReturned Coverage Results" MODIFIED="1634273105262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest.xml" NAME="UserTest Coverage Results" MODIFIED="1632979530406" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest_testValidateCartIsArray.xml" NAME="cartArrayUnitTestTest.testValidateCartIsArray Coverage Results" MODIFIED="1633939711656" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -257,7 +260,6 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserKey.xml" NAME="userArrayUnitTestTest.testValidateUserKey Coverage Results" MODIFIED="1634042520779" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockUsersTest_testMockUsers1AreReturned.xml" NAME="MockUsersTest.testMockUsers1AreReturned Coverage Results" MODIFIED="1634273235434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testValidateInitSessionIsEmptyTrue.xml" NAME="redirectUnitTestTest.testValidateInitSessionIsEmptyTrue Coverage Results" MODIFIED="1632980362533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../Program Files/JetBrains/PhpStorm 2021.2.1/jbr/bin/../../../../../../xampp/htdocs/302CEM-Agile-Development-Group-2/phpunit.xml" NAME="phpunit.xml" MODIFIED="1633935784204" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@cartArrayUnitTestTest_testValidateCartKey.xml" NAME="cartArrayUnitTestTest.testValidateCartKey Coverage Results" MODIFIED="1634044259852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidate_Game_Is_Array.xml" NAME="GameTest.testValidate_Game_Is_Array Coverage Results" MODIFIED="1634803015483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
