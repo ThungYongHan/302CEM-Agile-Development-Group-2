@@ -17,14 +17,14 @@ class GameYongHanTest extends TestCase
         unset($this->game);
     }
 
-    //check if game is an array
+    //test pass if game is an array
     public function test_Validate_Game_Is_Array()
     {
         $result = $this->game->validateGameIsArray();
         $this->assertTrue($result);
     }
 
-    // check if array has key of as listed
+    // test pass if game array has key of as listed
     public function test_Validate_Game_Has_All_Keys()
     {
         $result = $this->game->validateGameHasAllKeys();
@@ -38,7 +38,7 @@ class GameYongHanTest extends TestCase
         $this->assertArrayHasKey('game_cover', $result);
     }
 
-    // check if array has key of as listed
+    // deliberately fail test as game array is missing game_cover key
     public function testFail_Validate_Game_Missing_GameCover_Key()
     {
         $result = $this->game->validateGameMissingKey();
@@ -56,6 +56,7 @@ class GameYongHanTest extends TestCase
         }
     }
 
+    // deliberately fail test as there are missing parameters when calling addGame()
     public function testFail_addGame_When_Missing_Parameters()
     {
         try {
@@ -73,6 +74,7 @@ class GameYongHanTest extends TestCase
         }
     }
 
+    // test pass if addGame() functions as expected with correct game insertion
     public function test_addGame()
     {
         $mockGame = $this->createMock(GameRepositoryYongHan::class);

@@ -16,10 +16,11 @@ class UserYongHanTest extends TestCase
         unset($this->user);
     }
 
+    // test pass if all data is returned correctly for mockUsers
     public function test_MockUsers_Are_Returned()
     {
-        $mockUser = $this->createMock(UserRepositoryYongHan::class);
-        $mockUserArray=[
+        $mockUsers = $this->createMock(UserRepositoryYongHan::class);
+        $mockUsersArray=[
                 ['user_id' => 1, 'username' => 'user1', 'user_email' => 'user1@example.com', 'user_pass' => 'p455w0rd',
                 'vkey' => '', 'user_role' => 'user', 'status' => 'Verified'],
                 ['user_id' => 2, 'username' => 'user2', 'user_email' => 'user2@example.com', 'user_pass' => 'p455w0rd',
@@ -29,14 +30,15 @@ class UserYongHanTest extends TestCase
                 ['user_id' => 4, 'username' => 'admin', 'user_email' => 'admin@example.com', 'user_pass' => 'p455w0rd',
                 'vkey' => '', 'user_role' => 'admin', 'status' => 'Verified'],
         ];
-        $mockUser ->method('fetchUsers')->willReturn($mockUserArray);
-        $users = $mockUser->fetchUsers();
+        $mockUsers ->method('fetchUsers')->willReturn($mockUsersArray);
+        $users = $mockUsers->fetchUsers();
         $this->assertEquals('user1', $users[0]['username']);
         $this->assertEquals('user2', $users[1]['username']);
         $this->assertEquals('user3', $users[2]['username']);
         $this->assertEquals('admin', $users[3]['username']);
     }
 
+    // test pass if all data is returned correctly for mockUser1
     public function test_MockUser1_Returned()
     {
         $mockUser = $this->createMock(UserRepositoryYongHan::class);
@@ -54,13 +56,14 @@ class UserYongHanTest extends TestCase
         $this->assertEquals('Verified', $users1[0]['status']);
     }
 
-    //check if User is an array
+    //test pass if user is an array
     public function test_Validate_User_Is_Array()
     {
         $result = $this->user->validateUserIsArray();
         $this->assertTrue($result);
     }
 
+    // test pass if user array has key of as listed
     public function test_Validate_User_Has_All_Keys()
     {
         $result = $this->user->validateUserKey();
@@ -73,7 +76,7 @@ class UserYongHanTest extends TestCase
         $this->assertArrayHasKey('status', $result);
     }
 
-    // check if array has key of as listed
+    // deliberately fail test as user array is missing user_role key
     public function testFail_Validate_User_Missing_UserRole_Key()
     {
         $result = $this->user->validateUserMissingKey();
@@ -90,7 +93,8 @@ class UserYongHanTest extends TestCase
         }
     }
 
-    public function test_Login_Verified_User()
+    // test pass if verified user logs in
+    public function test_loginUser_Verified_User()
     {
         $mockUser = $this->createMock(UserRepositoryYongHan::class);
         $mockUserArray=[
@@ -111,7 +115,8 @@ class UserYongHanTest extends TestCase
         $this->assertEquals('Verified', $User[0]['status']);
     }
 
-    public function testFail_Login_Unverified_User()
+    // deliberately fail test as unverified user tries to log in
+    public function testFail_loginUser_Unverified_User()
     {
         $mockUser = $this->createMock(UserRepositoryYongHan::class);
         $mockUserArray=[
@@ -136,7 +141,8 @@ class UserYongHanTest extends TestCase
         }
     }
 
-    public function testFail_Login_Wrong_Password()
+    // deliberately fail test as user inputs wrong password for login
+    public function testFail_loginUser_Wrong_Password()
     {
         $mockUser = $this->createMock(UserRepositoryYongHan::class);
         $mockUserArray=[
@@ -161,7 +167,8 @@ class UserYongHanTest extends TestCase
         }
     }
 
-    public function testFail_Login_Missing_Username()
+    // deliberately fail test as user does not input username when trying to log in
+    public function testFail_loginUser_Missing_Username()
     {
         try {
             $this->assertTrue($this->user->loginUser(
@@ -173,7 +180,8 @@ class UserYongHanTest extends TestCase
         }
     }
 
-    public function testFail_Login_Missing_Password()
+    // deliberately fail test as user does not input password when trying to log in
+    public function testFail_loginUser_Missing_Password()
     {
         try {
             $this->assertTrue($this->user->loginUser(

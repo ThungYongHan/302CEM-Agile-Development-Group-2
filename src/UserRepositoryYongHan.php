@@ -56,7 +56,7 @@ class UserRepositoryYongHan
 
     /**
 
-         * Fetch an array of products from the database
+         * Fetch an array of users from the database
 
      *
      * @return array
@@ -68,7 +68,7 @@ class UserRepositoryYongHan
     }
 
     /**
-     * Fetch an array of products from the database
+     * Fetch an array of user1 from the database
      *
      * @return array
      */
@@ -81,7 +81,7 @@ class UserRepositoryYongHan
 
 
     /**
-     * Fetch an array of products from the database
+     * Fetch an array of admin from the database
      *
      * @return array
      */
@@ -91,30 +91,6 @@ class UserRepositoryYongHan
                       AND status=\'Verified\' AND user_role=\'admin\'')
             ->fetchAll(\PDO::FETCH_ASSOC);
     }
-
-
-
-//    /**
-//     * Fetch an array of products from the database
-//     *
-//     * @return array
-//     */
-//    public function fetchUsers2(): array
-//    {
-//        return $this->getPdo()->prepare('SELECT * FROM users WHERE username = "user2" AND user_pass = "p455w0rd"')
-//            ->fetchAll(\PDO::FETCH_ASSOC);
-//    }
-//
-//    /**
-//     * Fetch an array of products from the database
-//     *
-//     * @return array
-//     */
-//    public function fetchUsers3(): array
-//    {
-//        return $this->getPdo()->prepare('SELECT * FROM users WHERE username = "user3" AND user_pass = "p455w0rd"')
-//            ->fetchAll(\PDO::FETCH_ASSOC);
-//    }
 
     public function validateUserIsArray()
     {

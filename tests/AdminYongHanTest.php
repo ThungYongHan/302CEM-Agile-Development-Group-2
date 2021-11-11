@@ -16,7 +16,8 @@ class AdminYongHanTest extends TestCase
         unset($this->admin);
     }
 
-    public function testMockAdminReturned()
+    // test pass if all data is returned correctly for mockAdmin
+    public function test_MockAdmin_Returned()
     {
         $mockAdmin = $this->createMock(UserRepositoryYongHan::class);
         $mockAdminArray=[
@@ -33,7 +34,8 @@ class AdminYongHanTest extends TestCase
         $this->assertEquals('Verified', $users1[0]['status']);
     }
 
-    public function testLogin_Admin()
+    // test pass if loginUser functions as expected when admin tries to login
+    public function test_loginUser_Admin()
     {
         $mockUser = $this->createMock(UserRepositoryYongHan::class);
         $mockAdminArray=[
@@ -54,6 +56,7 @@ class AdminYongHanTest extends TestCase
         $this->assertEquals('Verified', $User[0]['status']);
     }
 
+    // deliberately fail test when user tries to register with admin as username
     public function testFail_User_Register_With_Admin_Username()
     {
         try {
