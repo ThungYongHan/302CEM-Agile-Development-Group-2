@@ -120,7 +120,8 @@ if (empty($user)) {
                     </div>
                     <?php
                     $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
-                    $query = "SELECT AVG(reviews.review_num) as review_num, games.game_id, games.game_cover, games.game_name, games.game_desc FROM games INNER JOIN reviews ON games.game_id = reviews.game_id GROUP BY games.game_id ORDER BY games.game_id ASC";
+                    $query = "SELECT AVG(reviews.review_num) as review_num, games.game_id, games.game_cover, games.game_name, games.game_desc 
+                              FROM games LEFT JOIN reviews ON games.game_id = reviews.game_id GROUP BY games.game_id ORDER BY games.game_id ASC";
                     $result = mysqli_query($connect, $query);
                     $row['game_id'] = $_GET['game_id'];
 
