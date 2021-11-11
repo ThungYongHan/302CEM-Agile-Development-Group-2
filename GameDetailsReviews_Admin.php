@@ -14,7 +14,7 @@ error_reporting(0);
 session_start();
 $title = $_POST['game_name'];
 $id = $_GET['game_id'];
-$user = $_SESSION['username'];
+$user = $_SESSION['username']="admin";
 if (empty($user)) {
     include('header.php');
 } else {
@@ -384,7 +384,7 @@ $sql = "SELECT *
                 print '
             <script>
             window.alert(\'Update successful\');
-            window.location.href=\'GameBrowsingHomepage.php.\';
+            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
             </script>';
             }    
             else {
@@ -395,6 +395,7 @@ $sql = "SELECT *
             }
         }
 
+
         // DELETE FUNCTION
         if(isset($_POST["Delete"])){
          $query = "DELETE FROM games WHERE game_id = '$id'";
@@ -403,12 +404,7 @@ $sql = "SELECT *
             print '
             <script>
             window.alert(\'Game has been deleted!\');
-            window.location.href=\'GameBrowsingHomepage.php.\';
-            </script>';
-         } else {
-            print '
-            <script>
-            window.alert(\'Deletion fail\');
+            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
             </script>';
          }
         }
