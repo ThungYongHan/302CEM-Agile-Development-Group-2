@@ -8,7 +8,7 @@ class AdminYongHanTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->admin = new GameRepositoryYongHan;
+        $this->admin = new UserRepositoryYongHan;
     }
 
     protected function tearDown(): void
@@ -56,37 +56,12 @@ class AdminYongHanTest extends TestCase
 
     public function testFail_User_Register_With_Admin_Username()
     {
-//        $mockUser = $this->createMock(UserRepositoryYongHan::class);
-//        $mockAdminArray=[
-//            ['user_id' => 4, 'username' => 'admin', 'user_email' => 'admin@example.com',
-//                'user_pass' => 'p455w0rd', 'vkey' => '',
-//                'user_role' => 'admin', 'status' => 'Verified'
-//            ],
-//        ];
-//
-//        $mockUser ->expects($this->exactly(1)) ->method('userRegistration')->willReturn($mockAdminArray);
-//        $User = $mockUser->userRegistration(
-//            'admin',
-//            'admin@example.com',
-//            'p455w0rd',
-//            'p455w0rd'
-//        );
-//        try {
-//            $this->assertEquals('user', $User[0]['username']);
-//        } catch (\Exception $error) {
-//            $this->assertEquals('Failed asserting that two strings are equal.', $error->getMessage());
-//        }
-//        $this->assertEquals('p455w0rd', $User[0]['user_pass']);
-//        $this->assertEquals('Verified', $User[0]['status']);
         try {
-            $this->assertTrue($this->admin->addGame(
-                'mockUser',
-                "",
-                'Explore a vast new world and catch creatures!',
-                'GameFreak',
-                '2021-10-15 22:00:00',
-                "",
-                'pokemon_cover.jpg'
+            $this->assertTrue($this->admin->userRegistration(
+                'admin',
+                'admin@example.com',
+                'p455w0rd',
+                'p455w0rd',
             ));
         } catch (\Exception $error) {
             $this->assertEquals('Failed asserting that false is true.', $error->getMessage());

@@ -43,13 +43,14 @@ class UserRepositoryYongHan
     {
         if (empty($user_name) || empty($user_email) || empty($user_pass) || empty($user_confirm_pass)) {
             return false;
+        }
+        if (($user_name) == 'admin') {
+            return false;
         } else {
             return $this->getPdo()->prepare('INSERT INTO Users (username, user_email, user_pass, vkey, user_role)
                                             VALUES (\'$username\', \'$email\', \'$password\', \'$token\', \'user\')')
                                   ->fetchAll(\PDO::FETCH_ASSOC);
         }
-        //            $this->getPdo()->prepare('INSERT INTO Users (username, user_email, user_pass, vkey, user_role)
-        //                                            VALUES (\'$username\', \'$email\', \'$password\', \'$token\', \'user\')');
     }
 
 

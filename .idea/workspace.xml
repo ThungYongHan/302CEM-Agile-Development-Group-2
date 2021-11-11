@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/createDatabase.php" beforeDir="false" afterPath="$PROJECT_DIR$/createDatabase.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GameRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UserRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redirectUnitTestClass.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/userArrayUnitTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/GameTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/MockUsersTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/redirectUnitTestTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/userArrayUnitTestTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UserRepositoryYongHan.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/UserRepositoryYongHan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/AdminYongHanTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/AdminYongHanTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,9 +108,13 @@
       <recent name="C:\xampp\htdocs\302CEM-Agile-Development-Group-2\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.GameYongHanTest.testFail_addGame_When_Missing_Parameters">
+  <component name="RunManager" selected="PHPUnit.Local Unit Tests">
     <configuration name="AdminYongHanTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="AdminYongHanTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/AdminYongHanTest.php" scope="Class" />
+      <method v="2" />
+    </configuration>
+    <configuration name="AdminYongHanTest.testFail_User_Register_With_Admin_Username" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="AdminYongHanTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/AdminYongHanTest.php" method="testFail_User_Register_With_Admin_Username" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="GameYongHanTest.testFail_addGame_When_Missing_Parameters" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -141,25 +133,21 @@
       <TestRunner class="UserTestYongHan" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/UserYongHanTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="UserYongHanTest.testFail_Login_Wrong_Password" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="UserYongHanTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/UserYongHanTest.php" method="testFail_Login_Wrong_Password" scope="Method" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="PHPUnit.Local Unit Tests" />
-      <item itemvalue="PHPUnit.UserYongHanTest.testFail_Login_Wrong_Password" />
       <item itemvalue="PHPUnit.UserTestYongHan" />
       <item itemvalue="PHPUnit.AdminYongHanTest" />
       <item itemvalue="PHPUnit.GameYongHanTest.test_addGame" />
       <item itemvalue="PHPUnit.GameYongHanTest.testFail_addGame_When_Missing_Parameters" />
+      <item itemvalue="PHPUnit.AdminYongHanTest.testFail_User_Register_With_Admin_Username" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.AdminYongHanTest.testFail_User_Register_With_Admin_Username" />
+        <item itemvalue="PHPUnit.AdminYongHanTest" />
         <item itemvalue="PHPUnit.GameYongHanTest.testFail_addGame_When_Missing_Parameters" />
         <item itemvalue="PHPUnit.GameYongHanTest.test_addGame" />
-        <item itemvalue="PHPUnit.AdminYongHanTest" />
         <item itemvalue="PHPUnit.UserTestYongHan" />
-        <item itemvalue="PHPUnit.UserYongHanTest.testFail_Login_Wrong_Password" />
       </list>
     </recent_temporary>
   </component>
@@ -206,7 +194,7 @@
       <workItem from="1636617004030" duration="1953000" />
       <workItem from="1636620368082" duration="12000" />
       <workItem from="1636620394377" duration="2570000" />
-      <workItem from="1636624123156" duration="456000" />
+      <workItem from="1636624123156" duration="2339000" />
     </task>
     <servers />
   </component>
@@ -237,7 +225,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@redirectUnitTestTest_testOnlineRedirectOK.xml" NAME="redirectUnitTestTest.testOnlineRedirectOK Coverage Results" MODIFIED="1632992125902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest_testCheckMockGameIsInsertedAndHasCorrectDetails.xml" NAME="MockGamesTest.testCheckMockGameIsInsertedAndHasCorrectDetails Coverage Results" MODIFIED="1634483183810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest_testMockUsersAreReturned.xml" NAME="UserTest.testMockUsersAreReturned Coverage Results" MODIFIED="1636548777346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@AdminYongHanTest.xml" NAME="AdminYongHanTest Coverage Results" MODIFIED="1636622654490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@AdminYongHanTest.xml" NAME="AdminYongHanTest Coverage Results" MODIFIED="1636626575135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testMockUsers3Returned.xml" NAME="userArrayUnitTestTest.testMockUsers3Returned Coverage Results" MODIFIED="1636543905963" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest.xml" NAME="userArrayUnitTestTest Coverage Results" MODIFIED="1633939673180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testAddGame.xml" NAME="GameTest.testAddGame Coverage Results" MODIFIED="1634495058626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -256,7 +244,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidateGameKey.xml" NAME="GameTest.testValidateGameKey Coverage Results" MODIFIED="1634495863465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@AdminTest_testLogin_Admin.xml" NAME="AdminTest.testLogin_Admin Coverage Results" MODIFIED="1636549229567" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testValidateGameIsArray.xml" NAME="GameTest.testValidateGameIsArray Coverage Results" MODIFIED="1634495857188" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@AdminYongHanTest_testFail_User_Register_With_Admin_Username.xml" NAME="AdminYongHanTest.testFail_User_Register_With_Admin_Username Coverage Results" MODIFIED="1636622254330" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@AdminYongHanTest_testFail_User_Register_With_Admin_Username.xml" NAME="AdminYongHanTest.testFail_User_Register_With_Admin_Username Coverage Results" MODIFIED="1636627079582" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@UserTest_testLogin_Unverified_User.xml" NAME="UserTest.testLogin_Unverified_User Coverage Results" MODIFIED="1636547447863" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTestYongHan_test_Validate_Game_Is_Array.xml" NAME="GameTestYongHan.test_Validate_Game_Is_Array Coverage Results" MODIFIED="1636621008736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testFail_Validate_User_Missing_UserRole_Key.xml" NAME="userArrayUnitTestTest.testFail_Validate_User_Missing_UserRole_Key Coverage Results" MODIFIED="1636543900619" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -285,7 +273,7 @@
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testFail_addGame_When_Missing_Parameters.xml" NAME="GameTest.testFail_addGame_When_Missing_Parameters Coverage Results" MODIFIED="1636545038426" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTest_testMockCorrectGameIsInserted.xml" NAME="GameTest.testMockCorrectGameIsInserted Coverage Results" MODIFIED="1634271695080" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@userArrayUnitTestTest_testValidateUserIsArray.xml" NAME="userArrayUnitTestTest.testValidateUserIsArray Coverage Results" MODIFIED="1636543690205" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@Local_Unit_Tests.xml" NAME="Local Unit Tests Coverage Results" MODIFIED="1636622696135" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@Local_Unit_Tests.xml" NAME="Local Unit Tests Coverage Results" MODIFIED="1636627120513" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@RedirectTestYongHan_testOnlineRedirectOK.xml" NAME="RedirectTestYongHan.testOnlineRedirectOK Coverage Results" MODIFIED="1636620064385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@MockGamesTest_testValidateGameIsArray.xml" NAME="MockGamesTest.testValidateGameIsArray Coverage Results" MODIFIED="1634481958949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/302CEM_Agile_Development_Group_2@GameTestYongHan_test_Validate_Game_Has_All_Keys.xml" NAME="GameTestYongHan.test_Validate_Game_Has_All_Keys Coverage Results" MODIFIED="1636620216839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="PhpCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
