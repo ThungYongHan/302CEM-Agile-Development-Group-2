@@ -10,7 +10,6 @@ function loginUser($username, $password)
 {
     $db = mysqli_connect('localhost', 'root', '', 'GameReviewWebsite');
     if (isset($_POST['login_user'])) {
-
         if (empty($username)) {
             emptyUsernameAlert();
         }
@@ -19,26 +18,33 @@ function loginUser($username, $password)
         }
 
         if ((!empty($username)) && (!empty($password))) {
-            $query = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password' AND status='Verified'";
+            $userquery = "SELECT * FROM Users 
+                          WHERE username='$username' AND user_pass='$password' AND status='Verified'";
+
             $usernamequery = "SELECT * FROM Users WHERE username='$username'";
             $usernameeverifiedquery = "SELECT * FROM Users WHERE username='$username' AND status='Verified'";
 
-            $results = mysqli_query($db, $query);
+            $userresults = mysqli_query($db, $userquery);
+            $rolequery = "SELECT * FROM Users WHERE username='$username' AND user_role='user'";
+            $roleresults = mysqli_query($db, $rolequery);
+
             $usernameresults = mysqli_query($db, $usernamequery);
-            $verifyresults = mysqli_query($db,$usernameeverifiedquery);
+            $verifyresults = mysqli_query($db, $usernameeverifiedquery);
 
-
-            if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($verifyresults) != 1 ) {
+            if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($verifyresults) != 1) {
                 unverifiedEmailAlert();
-            }
-            else if (mysqli_num_rows($usernameresults) == 1 && mysqli_num_rows($results) != 1) {
+            } elseif (mysqli_num_rows($usernameresults) == 1 && ((mysqli_num_rows($userresults) != 1))) {
                 invalidPasswordAlert();
-            }
-            elseif (mysqli_num_rows($results) == 1) {
-                $_SESSION['username'] = $username;
-                header('Location: http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
-            }
-            else {
+            } elseif (mysqli_num_rows($userresults) == 1) {
+                if (mysqli_num_rows($roleresults) == 1) {
+                    $_SESSION['username'] = $username;
+                    header('Location:
+                     http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
+                } else {
+                    $_SESSION['username'] = "admin";
+                    adminLoginAlert();
+                }
+            } else {
                 invalidLoginAlert();
             }
         }
@@ -100,4 +106,13 @@ function unverifiedEmailAlert()
     ";
 }
 
-
+function adminLoginAlert()
+{
+    echo
+    "
+    <script>
+        window.alert('You are logging in as admin!');
+        window.location.href='GameBrowsingHomepage_Admin.php';
+    </script>
+    ";
+}

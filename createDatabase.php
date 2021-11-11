@@ -8,7 +8,7 @@ $sql = "CREATE DATABASE GameReviewWebsite";
 if ($mysqli->query($sql) === true) {
     echo "GameReviewWebsite database created successfully";
 } else {
-    echo "Error creating GameReviewWebsite sdatabase: " . $mysqli->error;
+    echo "Error creating GameReviewWebsite database: " . $mysqli->error;
 }
 
 $mysqli->close();
