@@ -38,8 +38,7 @@ function loginUser($username, $password)
             } elseif (mysqli_num_rows($userresults) == 1) {
                 if (mysqli_num_rows($roleresults) == 1) {
                     $_SESSION['username'] = $username;
-                    header('Location:
-                     http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
+                    header('Location:http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
                 } else {
                     $_SESSION['username'] = "admin";
                     adminLoginAlert();
