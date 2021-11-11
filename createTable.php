@@ -25,7 +25,7 @@ game_datetime DATETIME NOT NULL,
 game_year YEAR NOT NULL,
 game_cover BLOB NOT NULL,
 PRIMARY KEY (game_id),
-CONSTRAINT FK_gameuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id)
+CONSTRAINT FK_gameuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id) ON UPDATE CASCADE ON DELETE CASCADE
 )";
 
 $sqlReviews = "CREATE TABLE IF NOT EXISTS Reviews (
@@ -36,8 +36,8 @@ user_review VARCHAR(256) NOT NULL,
 review_num INT(6) NOT NULL,
 review_datetime DATETIME NOT NULL,
 PRIMARY KEY (review_id),
-CONSTRAINT FK_reviewuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id),
-CONSTRAINT FK_reviewgame_id FOREIGN KEY (game_id) REFERENCES Games(game_id)
+CONSTRAINT FK_reviewuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FK_reviewgame_id FOREIGN KEY (game_id) REFERENCES Games(game_id) ON UPDATE CASCADE ON DELETE CASCADE
 )";
 
 $sqlInsertUsers = "INSERT INTO Users (username, user_email, user_pass, user_role, status) VALUES 
