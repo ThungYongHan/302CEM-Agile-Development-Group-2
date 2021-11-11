@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/302CEM-Agile-Development-Group-2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/302CEM-Agile-Development-Group-2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.phpunit.result.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.phpunit.result.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/all.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/classes.js" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/classes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/complexity.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/complexity.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/composer.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/composer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/coupling.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/coupling.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/js/latest.json" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/js/latest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/junit.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/junit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/loc.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/loc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/oop.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/oop.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/package_relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/package_relations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/packages.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/packages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/relations.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/relations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myreport/violations.html" beforeDir="false" afterPath="$PROJECT_DIR$/myreport/violations.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
-    </list>
+    <list default="true" id="d33b8335-acb5-4098-8daf-ddcea3dbe01d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -267,7 +231,7 @@
       <workItem from="1636617004030" duration="1953000" />
       <workItem from="1636620368082" duration="12000" />
       <workItem from="1636620394377" duration="2570000" />
-      <workItem from="1636624123156" duration="4920000" />
+      <workItem from="1636624123156" duration="5189000" />
     </task>
     <servers />
   </component>
