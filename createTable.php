@@ -9,6 +9,9 @@ user_id INT(6) AUTO_INCREMENT,
 username VARCHAR(256) NOT NULL,
 user_email VARCHAR(256) NOT NULL,
 user_pass VARCHAR(256) NOT NULL,
+vkey VARCHAR(50) NOT NULL,
+user_role VARCHAR(256) NOT NULL,
+status VARCHAR(10) NOT NULL DEFAULT '0',
 PRIMARY KEY (user_id)
 )";
 
@@ -22,7 +25,7 @@ game_datetime DATETIME NOT NULL,
 game_year YEAR NOT NULL,
 game_cover BLOB NOT NULL,
 PRIMARY KEY (game_id),
-CONSTRAINT FK_gameuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id)
+CONSTRAINT FK_gameuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id) ON UPDATE CASCADE ON DELETE CASCADE
 )";
 
 $sqlReviews = "CREATE TABLE IF NOT EXISTS Reviews (
@@ -33,14 +36,15 @@ user_review VARCHAR(256) NOT NULL,
 review_num INT(6) NOT NULL,
 review_datetime DATETIME NOT NULL,
 PRIMARY KEY (review_id),
-CONSTRAINT FK_reviewuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id),
-CONSTRAINT FK_reviewgame_id FOREIGN KEY (game_id) REFERENCES Games(game_id)
+CONSTRAINT FK_reviewuser_id FOREIGN KEY (user_id) REFERENCES Users(user_id) ON UPDATE CASCADE ON DELETE CASCADE,
+CONSTRAINT FK_reviewgame_id FOREIGN KEY (game_id) REFERENCES Games(game_id) ON UPDATE CASCADE ON DELETE CASCADE
 )";
 
-$sqlInsertUsers = "INSERT INTO Users (username, user_email, user_pass) VALUES 
-('user1', 'user1@example.com', 'p455w0rd'),
-('user2', 'user2@example.com', 'p455w0rd'),
-('user3', 'user3@example.com', 'p455w0rd')";
+$sqlInsertUsers = "INSERT INTO Users (username, user_email, user_pass, user_role, status) VALUES 
+('user1', 'user1@example.com', 'p455w0rd', 'user', 'Verified'),
+('user2', 'user2@example.com', 'p455w0rd', 'user', 'Verified'),
+('user3', 'user3@example.com', 'p455w0rd', 'user', 'Verified'),
+('admin', 'admin@example.com', 'p455w0rd', 'admin', 'Verified')";
 
 $sqlInsertGames = "INSERT INTO Games (user_id, game_name, game_desc, game_publisher, game_datetime, game_year, game_cover) VALUES 
 ((SELECT user_id FROM Users WHERE username ='user1'), 'Genshin Impact', 'Genshin Impact is an open-world action role-playing game that allows the player to control one of four characters in a party. Switching between characters can be done quickly during combat, allowing the player to use different combinations of skills.', 'miHoYo', '2021-09-01 09:00:00', '2017', LOAD_FILE('C:/xampp/htdocs/302CEM-Agile-Development-Group-2-master/images/Genshin_cover.jpg')),
