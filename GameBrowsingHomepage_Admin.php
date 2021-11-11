@@ -6,7 +6,7 @@ $user = $_SESSION['username']="admin";
 if (empty($user)) {
     include('header.php');
 } else {
-    include('loggedinAdminheader.php');
+    include('loggedinheader.php');
 }
 ?>
 <!DOCTYPE html>
