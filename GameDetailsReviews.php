@@ -197,7 +197,8 @@ $sql = "SELECT *
             print '<div class="container-fluid">
                 <div class="row g-1">
                 
-                <p class="text-light fw-bold fs-4">'.$row['username'].' <span class="fs-6"> on</span> <span class="fs-6" style="color:#5979f8"> '.date('d-m-Y',strtotime($row['review_datetime'])).'</span></p>';
+                <p class="text-light fw-bold fs-4">'.$row['username'].' <span class="fs-6"> on</span> <span class="fs-6" style="color:#5979f8"> '.date('d-m-Y',strtotime($row['review_datetime'])).'</span>
+                <span class="fs-6"> at </span><span class="fs-6" style="color:#5979f8">'.date('h:ia',strtotime($row['review_datetime'])).'</span></p>';
 
             print '<div class="article-bg mx-auto p-3"> <span class="fs-6 badge bg-dark">';
             print $row['review_num']. ' <i style="color:#c9d3fc;" class="fa fa-star"></i></span><div class="divider p-1"></div>';
