@@ -120,32 +120,33 @@ if (empty($user)) {
                     </div>
                     <?php
                     $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
-                    $query = "SELECT * FROM games ORDER BY game_id ASC";
+                    $query = "SELECT AVG(reviews.review_num) as review_num, games.game_id, games.game_cover, games.game_name, games.game_desc FROM games INNER JOIN reviews ON games.game_id = reviews.game_id GROUP BY games.game_id ORDER BY games.game_id ASC";
                     $result = mysqli_query($connect, $query);
-
                     $row['game_id'] = $_GET['game_id'];
+
                     while ($row = mysqli_fetch_array($result)) {
                         print'
-  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-  <div class="card-style-1 mb-30">
-    <div class="card-meta">
-    </div>
-    <div class="card-image">
-        <img src="data:image/jpg;base64,'.base64_encode($row['game_cover']).'"
-          alt="placeholder" style="width: 252px; height: 383px;" />
-    </div>
-    <div class="card-content">
-      <h4> '.$row['game_name'].' </h4>
-      <p>'.$row['game_desc'].'</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <button type="button" class="btn btn-primary" onclick="document.location=\'GameDetailsReviews.php?game_id='.$row['game_id'].'\'">View</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-   ';
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+                        <div class="card-style-1 mb-30">
+                            <div class="card-meta">
+                            </div>
+                            <div class="card-image">
+                                <img src="data:image/jpg;base64,'.base64_encode($row['game_cover']).'"
+                                alt="placeholder" style="width: 252px; height: 383px;" />
+                            </div>
+                            <div class="card-content">
+                            <h4> '.$row['game_name'].' </h4>
+                            <p>'.number_format($row['review_num'], 1).'<i style="color:#c9d3fc;" class="fa fa-star"></i></p>
+                            <p>'.$row['game_desc'].'</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                <button type="button" class="btn btn-primary" onclick="document.location=\'GameDetailsReviews.php?game_id='.$row['game_id'].'\'">View</button>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        ';
                     }
                     ?>
                 </div>
@@ -156,7 +157,5 @@ if (empty($user)) {
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
-
-
 
 
