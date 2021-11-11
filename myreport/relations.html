@@ -50,7 +50,7 @@
 <div class="page">
     <div class="content content-first">
         <div class="report-details">
-            Created at 2021-10-15 04:22:42        , with PHPMetrics v2.7.4 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
+            Created at 2021-11-11 11:57:59        , with PHPMetrics v2.7.4 (<a href="https://twitter.com/Halleck45">Jean-François Lépine</a>).
         </div>
 
         
@@ -249,19 +249,9 @@
 
     var relations = [
     {
-        "name": "\\App\\Game",
+        "name": "\\App\\GameRepositoryYongHan",
         "size": 3000,
-        "relations": [
-            "\\App\\GameRepository"
-        ]
-    },
-    {
-        "name": "\\App\\GameRepository",
-        "size": 3000,
-        "relations": [
-            "\\PDO",
-            "\\PDOException"
-        ]
+        "relations": []
     },
     {
         "name": "\\PDO",
@@ -274,18 +264,27 @@
         "relations": []
     },
     {
-        "name": "\\App\\User",
+        "name": "\\App\\GameYongHan",
         "size": 3000,
         "relations": [
-            "\\App\\UserRepository"
+            "\\App\\GameRepositoryYongHan"
         ]
     },
     {
-        "name": "\\App\\UserRepository",
+        "name": "\\RedirectYongHan",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\UserRepositoryYongHan",
+        "size": 3000,
+        "relations": []
+    },
+    {
+        "name": "\\App\\UserYongHan",
         "size": 3000,
         "relations": [
-            "\\PDO",
-            "\\PDOException"
+            "\\App\\UserRepositoryYongHan"
         ]
     }
 ];
