@@ -1,6 +1,6 @@
 <?php
 
-class redirectUnitTestClass
+class RedirectYongHan
 {
 
     public function redirect200()

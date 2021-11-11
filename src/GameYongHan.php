@@ -2,12 +2,12 @@
 
 namespace App;
 
-class Game{
+class GameYongHan
+{
     private array $games;
-    public string $gamename;
-    public GameRepository $gamesRepo;
+    public GameRepositoryYongHan $gamesRepo;
 
-    public function __construct(GameRepository $gamesRepo)
+    public function __construct(GameRepositoryYongHan $gamesRepo)
     {
         $this->gamesRepo = $gamesRepo;
     }

@@ -18,16 +18,13 @@ function loginUser($username, $password)
         }
 
         if ((!empty($username)) && (!empty($password))) {
-            $userquery = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password' AND status='Verified'";
-            // $adminquery = "SELECT * FROM Users WHERE username='$username' AND user_pass='$password' AND status='Verified' AND user_role='admin'";
+            $userquery = "SELECT * FROM Users 
+                          WHERE username='$username' AND user_pass='$password' AND status='Verified'";
 
             $usernamequery = "SELECT * FROM Users WHERE username='$username'";
             $usernameeverifiedquery = "SELECT * FROM Users WHERE username='$username' AND status='Verified'";
 
             $userresults = mysqli_query($db, $userquery);
-            // $adminresults = mysqli_query($db, $adminquery);
-            // $rolequery = "SELECT user_role FROM Users WHERE username='$username'";
-
             $rolequery = "SELECT * FROM Users WHERE username='$username' AND user_role='user'";
             $roleresults = mysqli_query($db, $rolequery);
 
@@ -41,7 +38,8 @@ function loginUser($username, $password)
             } elseif (mysqli_num_rows($userresults) == 1) {
                 if (mysqli_num_rows($roleresults) == 1) {
                     $_SESSION['username'] = $username;
-                    header('Location: http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
+                    header('Location:
+                     http://localhost:8080/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php');
                 } else {
                     $_SESSION['username'] = "admin";
                     adminLoginAlert();
@@ -114,7 +112,7 @@ function adminLoginAlert()
     "
     <script>
         window.alert('You are logging in as admin!');
-        window.location.href='GameBrowsingHomepage.php';
+        window.location.href='GameBrowsingHomepage_Admin.php';
     </script>
     ";
 }
