@@ -104,7 +104,7 @@ if (empty($user)) {
 
                                     <label for="customRange" class="form-label">Year Published</label>
                                     <input type="range" class="form-range" min="1980" max="2021" id="customRange" name="gameyear" required/>
-                                    <p>Year: <span id="demo"></span></p><br> 
+                                    <p>Year: <span id="demo"></span></p><br>
                                     <script>
                                         var slider = document.getElementById("customRange");
                                         var output = document.getElementById("demo");
@@ -120,13 +120,10 @@ if (empty($user)) {
                     </div>
                     <?php
                     $connect = mysqli_connect("localhost", "root", "", "GameReviewWebsite");
-                    $query = "SELECT AVG(reviews.review_num) as review_num, games.game_id, games.game_cover, games.game_name, games.game_desc FROM games INNER JOIN reviews ON games.game_id = reviews.game_id GROUP BY games.game_id ORDER BY games.game_id ASC";
+                    $query = "SELECT AVG(reviews.review_num) as review_num, games.game_id, games.game_cover, games.game_name, games.game_desc 
+                              FROM games LEFT JOIN reviews ON games.game_id = reviews.game_id GROUP BY games.game_id ORDER BY games.game_id ASC";
                     $result = mysqli_query($connect, $query);
                     $row['game_id'] = $_GET['game_id'];
-
-                    // $reviewquery = "SELECT AVG(review_num) FROM reviews GROUP BY game_id";
-                    // $reviewresult = mysqli_query($connect, $reviewquery);
-                    // $reviewrow = mysqli_fetch_array($re);
 
                     while ($row = mysqli_fetch_array($result)) {
                         print'
@@ -161,5 +158,4 @@ if (empty($user)) {
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </html>
-
 
