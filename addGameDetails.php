@@ -38,11 +38,18 @@ function addGame($user, $game_name, $game_desc, $game_publisher, $game_datetime,
             mysqli_stmt_store_result($statement);
 
             if (mysqli_stmt_num_rows($statement) == 1) {
-                echo "<script type='text/javascript'>
+                if ($_SESSION['username'] == 'admin') {
+                    echo "<script type='text/javascript'>
+                    alert ('The game is already exists in the database.');
+                    window.location.href='GameBrowsingHomepage_Admin.php';
+                    </script>";
+                }
+                else{
+                    echo "<script type='text/javascript'>
                     alert ('The game is already exists in the database.');
                     window.location.href='GameBrowsingHomepage.php';
-                </script>";
-
+                    </script>";
+                }
                 $problem = true;
             } else {
                 $game_name = trim($game_name);
