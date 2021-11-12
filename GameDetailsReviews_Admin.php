@@ -328,7 +328,7 @@ $sql = "SELECT *
             print "
             <script>
             window.alert('Review added and will display!');
-            window.location.href='GameBrowsingHomepage.php';
+            window.location.href='GameBrowsingHomepage_Admin.php';
             </script>";
 
         }
@@ -363,7 +363,7 @@ $sql = "SELECT *
 
                 mysqli_query($link,$sql);
                 addReviewSuccessAlert();
-//                header("Location:/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php");
+
 
             }
 
