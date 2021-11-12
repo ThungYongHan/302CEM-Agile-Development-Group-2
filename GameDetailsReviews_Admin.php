@@ -18,7 +18,7 @@ $user = $_SESSION['username']="admin";
 if (empty($user)) {
     include('header.php');
 } else {
-    include('loggedinAdminheader.php');
+    include('loggedinheader.php');
 }
 
 $sql = "SELECT * 
@@ -328,7 +328,7 @@ $sql = "SELECT *
             print "
             <script>
             window.alert('Review added and will display!');
-            window.location.href='GameBrowsingHomepage.php';
+            window.location.href='GameBrowsingHomepage_Admin.php';
             </script>";
 
         }
@@ -363,7 +363,7 @@ $sql = "SELECT *
 
                 mysqli_query($link,$sql);
                 addReviewSuccessAlert();
-//                header("Location:/302CEM-Agile-Development-Group-2-master/GameBrowsingHomepage.php");
+
 
             }
 
@@ -375,24 +375,59 @@ $sql = "SELECT *
             $game_name = $_POST['gamename'];
             $game_year =$_POST['gameyear'];
             $game_desc =$_POST['gamedescription'];
-            $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
 
-            $query = "UPDATE games SET game_publisher = '$game_publisher', game_name = '$game_name', 
-            game_year = '$game_year', game_desc = '$game_desc', game_cover = '$game_cover' WHERE game_id = '$id'";
+            $problem = false;
 
-            if (mysqli_query($link, $query)){
-                print '
-            <script>
-            window.alert(\'Update successful\');
-            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
-            </script>';
-            }    
-            else {
-                print '
-            <script>
-            window.alert(\'Edit fail\');
-            </script>';
+            $sql1 = "SELECT game_id FROM games WHERE game_name = ?";
+
+            if ($statement = mysqli_prepare($link, $sql1)) {
+                mysqli_stmt_bind_param($statement, "s", $param_gamename);
+        
+                $param_gamename = trim($game_name);
+        
+                if (mysqli_stmt_execute($statement)) {
+                    mysqli_stmt_store_result($statement);
+        
+                    if (mysqli_stmt_num_rows($statement) == 1) {
+                        echo "<script type='text/javascript'>
+                            alert ('The game is already inserted.');
+                        </script>";
+        
+                        $problem = true;
+                    } else {
+                        $game_name = trim($game_name);
+                    }
+                }
+                mysqli_stmt_close($statement);
             }
+
+            if ($_FILES["gamecover"]["size"] > 60000) {
+                fileSizeAlert();
+                $problem = true;
+            } else {
+                $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
+            }
+
+            if (!$problem) {
+                $query = "UPDATE games SET game_publisher = '$game_publisher', game_name = '$game_name', 
+            game_year = '$game_year', game_desc = '$game_desc', game_cover = '$game_cover' WHERE game_id = '$id'";
+        
+        if (mysqli_query($link, $query)){
+            print '
+        <script>
+        window.alert(\'Update successful\');
+        window.location.href=\'GameBrowsingHomepage_Admin.php.\';
+        </script>';
+        }    
+        else {
+            print '
+        <script>
+        window.alert(\'Edit fail\');
+        </script>';
+        }
+            }
+
+            
         }
 
 
@@ -404,10 +439,20 @@ $sql = "SELECT *
             print '
             <script>
             window.alert(\'Game has been deleted!\');
-            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
+            window.location.href=\'GameBrowsingHomepage_Admin.php\';
             </script>';
          }
         }
+
+function fileSizeAlert()
+{
+    echo
+    "
+    <script>
+        window.alert('Uploaded game cover image file size is over the 60kb limit.');
+    </script>
+    ";
+}
            
         mysqli_close($link);
 
