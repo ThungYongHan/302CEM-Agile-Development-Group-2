@@ -18,7 +18,7 @@ $user = $_SESSION['username']="admin";
 if (empty($user)) {
     include('header.php');
 } else {
-    include('loggedinheader.php');
+    include('loggedinAdminheader.php');
 }
 
 $sql = "SELECT * 
@@ -375,36 +375,24 @@ $sql = "SELECT *
             $game_name = $_POST['gamename'];
             $game_year =$_POST['gameyear'];
             $game_desc =$_POST['gamedescription'];
+            $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
 
-            $problem = false;
-
-            if ($_FILES["gamecover"]["size"] > 60000) {
-                fileSizeAlert();
-                $problem = true;
-            } else {
-                $game_cover = addslashes(file_get_contents($_FILES["gamecover"]["tmp_name"]));
-            }
-
-            if (!$problem) {
-                $query = "UPDATE games SET game_publisher = '$game_publisher', game_name = '$game_name', 
+            $query = "UPDATE games SET game_publisher = '$game_publisher', game_name = '$game_name', 
             game_year = '$game_year', game_desc = '$game_desc', game_cover = '$game_cover' WHERE game_id = '$id'";
-        
-        if (mysqli_query($link, $query)){
-            print '
-        <script>
-        window.alert(\'Update successful\');
-        window.location.href=\'GameBrowsingHomepage_Admin.php.\';
-        </script>';
-        }    
-        else {
-            print '
-        <script>
-        window.alert(\'Edit fail\');
-        </script>';
-        }
-            }
 
-            
+            if (mysqli_query($link, $query)){
+                print '
+            <script>
+            window.alert(\'Update successful\');
+            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
+            </script>';
+            }    
+            else {
+                print '
+            <script>
+            window.alert(\'Edit fail\');
+            </script>';
+            }
         }
 
 
@@ -416,20 +404,10 @@ $sql = "SELECT *
             print '
             <script>
             window.alert(\'Game has been deleted!\');
-            window.location.href=\'GameBrowsingHomepage_Admin.php\';
+            window.location.href=\'GameBrowsingHomepage_Admin.php.\';
             </script>';
          }
         }
-
-function fileSizeAlert()
-{
-    echo
-    "
-    <script>
-        window.alert('Uploaded game cover image file size is over the 60kb limit.');
-    </script>
-    ";
-}
            
         mysqli_close($link);
 
