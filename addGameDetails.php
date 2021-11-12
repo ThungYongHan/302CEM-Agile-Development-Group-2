@@ -84,11 +84,22 @@ function fileSizeAlert()
 
 function AddSuccessAlert()
 {
-    echo
-    "
-    <script>
-        window.alert('Game added successfully.');
-        window.location.href='GameBrowsingHomepage.php';
-    </script>
-    ";
+    if ($_SESSION['username'] == 'admin'){
+        echo
+        "
+        <script>
+            window.alert('Game added successfully.');
+            window.location.href='GameBrowsingHomepage_Admin.php';
+        </script>
+        ";
+    }
+    else {
+        echo
+        "
+        <script>
+            window.alert('Game added successfully.');
+            window.location.href='GameBrowsingHomepage.php';
+        </script>
+        ";
+        }
 }
