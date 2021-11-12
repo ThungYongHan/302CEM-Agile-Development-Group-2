@@ -73,13 +73,24 @@ function addGame($user, $game_name, $game_desc, $game_publisher, $game_datetime,
 
 function fileSizeAlert()
 {
-    echo
-    "
-    <script>
-        window.alert('Uploaded game cover image file size is over the 60kb limit.');
-        window.location.href='GameBrowsingHomepage.php';
-    </script>
-    ";
+    if ($_SESSION['username'] == 'admin'){
+        echo
+        "
+        <script>
+            window.alert('Uploaded game cover image file size is over the 60kb limit.');
+            window.location.href='GameBrowsingHomepage_Admin.php';
+        </script>
+        ";
+    }
+    else {
+        echo
+        "
+        <script>
+            window.alert('Uploaded game cover image file size is over the 60kb limit.');
+            window.location.href='GameBrowsingHomepage.php';
+        </script>
+        ";
+    }
 }
 
 function AddSuccessAlert()
