@@ -13,6 +13,6 @@
   },
   "require-dev": {
     "phpmetrics/phpmetrics": "^2.7",
-    "squizlabs/php_codesniffer": "3.6.1",
+    "squizlabs/php_codesniffer": "3.6.1"
   }
 }
