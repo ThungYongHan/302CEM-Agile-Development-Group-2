@@ -390,7 +390,7 @@ $sql = "SELECT *
         
                     if (mysqli_stmt_num_rows($statement) == 1) {
                         echo "<script type='text/javascript'>
-                            alert ('The game is already inserted.');
+                            alert ('The game is already exists in the database.');
                         </script>";
         
                         $problem = true;
